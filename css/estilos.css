@@ -1,0 +1,183 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body{
+    background-color: rgb(45, 174, 43)
+}
+
+header {
+    background-color: rgb(28, 28, 143);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+}   
+
+.logo-container {
+    display: flex; /* Establece el contenedor como un flexbox */
+    justify-content: space-between; /* Centra horizontalmente los elementos dentro del contenedor */
+    align-items: center; /* Centra verticalmente los elementos dentro del contenedor */
+    gap: 450px; /* Ajusta el valor según tus necesidades */
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+    padding: 0 2rem; /* Agrega un poco de espacio a los lados del contenedor */
+    height: 150px; /* Asegura que el contenedor tenga la misma altura que el header */
+}
+
+nav {
+    display: flex;
+    align-items: center; /* Ajusta el espacio entre los enlaces */
+    
+    
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links li {
+    position: relative; /* Establece la posición relativa para el elemento de la lista */
+}
+nav li a{
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: white; /* Ajusta el color según tus necesidades */
+    font-size: 20px; /* Ajusta el valor según tus necesidades */
+    font-weight: 600; /* Ajusta el valor según tus necesidades */
+    border-bottom: 2px solid transparent; /* Agrega un borde inferior transparente para el efecto hover */
+    transition: border-color .4s ease; /* Agrega una transición suave para el efecto hover */
+    display: block;
+    
+}
+
+nav li a:hover {
+    border-bottom: 2px solid white; /* Cambia el color del borde inferior al hacer hover */
+}
+.menu{
+    list-style: none; /* Elimina los puntos de la lista */
+    display: flex;
+    gap: 2rem;
+}
+
+/*Menu con dropdown*/
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+/*PADRE*/
+.menu li {
+    position: relative; /* Establece la posición relativa para el elemento de la lista */
+
+}
+
+/*links*/
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/*Submenu oculto*/
+.submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    min-width: 160px;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+
+    /* Animación slide down */
+    max-height: 0;             /* ← empieza colapsado */
+    overflow: hidden;          /* ← oculta el contenido */
+    opacity: 0;
+    transition: max-height 0.35s ease, opacity 0.3s ease, padding 0.3s ease;
+}
+
+.submenu li a {
+    display: block;
+    padding: 10px 16px;
+    color: black;
+    font-size: 15px;
+    font-weight: 400;
+    text-decoration: none;
+    transition: background 0.2s ease;
+}
+
+.submenu li a:hover {
+    background: #f2f2f2;
+}
+
+.dropdown:hover .submenu {
+    max-height: 200px;         /* ← se expande hacia abajo */
+    opacity: 1;
+    padding: 6px 0;
+}
+
+.arrow {
+  display: inline-block;
+  transition: transform 0.3s;
+  font-size: 12px;
+  margin-left: 4px;
+}
+
+.dropdown:hover .arrow {
+  transform: rotate(180deg);
+}
+
+.btn-contacto {
+    background-color: #22c55e;
+    color: white;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 999px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+
+    /* Esto es importante para que se vea bien en <button> */
+    outline: none;
+    font-family: inherit;   /* ← los <button> no heredan la fuente automáticamente */
+    line-height: 1;
+}
+
+.btn-contacto:hover {
+    background-color: #16a34a;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(34, 197, 94, 0.4);
+}
+
+.btn-contacto:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+.portada-container {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;   /* evita que la imagen se salga */
+}
+
+.portada {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+    
+img {
+    width: 90px;
+
+}
+

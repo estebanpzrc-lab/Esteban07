@@ -1,48 +1,49 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Blog</title>
-    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>Inmobiliaria-Portada</title>
 </head>
-
 <body>
-    <header class="header">
-        <h1>Mi Blog</h1>
-        <nav>
-            <a href="#">Inicio</a>
-            <a href="#">Articulos</a>
-            <a href="#">Contacto</a>
-        </nav>
+    <header class="navbar">
+        <div class="logo-container">
+            <img src="img/logo.png" alt="Logo" class="logo">
+            <nav> <!-- Desde aqui empieza el menu de navegacion -->
+                <ul class="nav-links"> <!-- Aquie empiezan las listas de navegacion que aparece en el menu-->
+                    <li>
+                        <a href="#">Inicio</a>
+                    </li>
+                    <li class="dropdown">
+                            <a href="#">Vender <span class="arrow">⌵</span></a>
+                    
+                        <ul class="submenu">
+                            <li><a href="#">Comprar</a></li>
+                            <li><a href="#">Alquilar</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="active">Quiénes somos</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </nav>
+        </div>
+        <button class="btn-contacto">Contacto</button>
     </header>
+<div class="portada-container">
+    <img src="img/tu-logo.png" alt="portada" class="portada">
+</div>
+    
+<section>
+    <div>
+        <h3>Asesoramiento experto</h3>
+        <p>Nuestros agentes inmobiliarios están dispuestos a encontrar la propiedad que mejor se adapte a tu presupuesto y propósito, en la zona de tu preferencia o la más recomendable.</p>
+    </div>
 
-<main class="container">
-    <section class="content">
-        <article class="post">
-            <span class="badge">CLICK   </span>
-            <h2>Aprendiendo html</h2>
-            <p>Html es el lenguaje base de la web...</p>
-        </article>
 
-        <article class="post">
-            <h2>Introduccion a CSS</h2>
-            <p>CSS permite dar estilos a la web...</p>
-        </article>
-    </section>
+</section>
 
-    <!--aside -- Se usa para contenidos complementarios-->
-    <aside class="sidebar">
-        <h3>Sobre mí</h3>
-        <p>Estudiante de desarrollo web</p>
-    </aside>
-</main>
 
-<footer class="footer">
-    <p>&copy 2026 - Mi Blog</p>
-</footer>
+    
 </body>
-
-</html>
+</html> 
