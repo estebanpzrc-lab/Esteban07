@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --verde: #4CAF50;
+    --Verde-Osc: #388E3C;
+    --azul-corp: #3F5EB9;
+    --Azul-Pro: #1A3066;
+}
+
+
+
+.quien {
+    background-color: var(--azul-corp);
+    text-align: center;
+    margin-bottom: -70px;
+    margin-right: 500px;
+    margin-left: 500px;
+}
+
+.parr {
+    background-color: var(--Azul-Pro);
+    padding: 20px;
+    margin: 50px;
+    color: white;
+    margin-right: 400px;
+    margin-left: 400px;
+    tex
+
+}

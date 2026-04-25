@@ -83,10 +83,6 @@ body {
     transform: translateY(-5px);
 }
 
-.post h2 {
-    font-size: : 24px;
-    margin-bottom: 20px;
-}
 
 .badge {
     position: absolute;
