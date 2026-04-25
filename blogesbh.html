@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Peñarrubia Inmobiliaria</title>
+  <meta name="description" content="Peñarrubia Inmobiliaria - Más de 20 años mejorando tu vida. Compra, venta y alquiler en Valencia y alrededores." />
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header role="banner">
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">P</div>
+        <div>
+          <div
+          <div class="muted" style="font-size:13px">Más de 20 años mejorando tu vida</div>
+        </div>
+      </div>
+
+      <nav role="navigation" aria-label="Menú principal">
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#vender">Vender</a></li>
+          <li><a href="#quienes">Quiénes somos</a></li>
+          <li><a href="#blog">Blog</a></li>
+        </ul>
+      </nav>
+
+      <div style="display:flex;gap:10px;align-items:center">
+        <a class="secondary" href="#contacto" style="text-decoration:none;color:var(--dark)">Contacto</a>
+        <button class="btn" onclick="document.getElementById('contacto').scrollIntoView({behavior:'smooth'})">Agenda un asesoramiento</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container" id="inicio">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-left">
+        <h1 id="hero-title">Tu inmobiliaria de confianza</h1>
+        <p>Con más de <strong>20 años</strong> mejorando la vida de nuestros clientes.</p>
+        <div class="hero-cta">
+          <button class="btn" onclick="document.getElementById('listings').scrollIntoView({behavior:'smooth'})">Ver propiedades</button>
+          <a class="secondary" href="#quienes">Conócenos</a>
+        </div>
+      </div>
+
+      <div class="hero-right" aria-hidden="true">
+        <img src="assets/hero-building.jpg" alt="Edificios modernos con balcones verdes" />
+      </div>
+    </section>
+
+    <section class="features" aria-label="Beneficios">
+      <article class="card" aria-labelledby="f1">
+        <h3 id="f1">Asesoramiento experto</h3>
+        <p class="muted">Nuestros agentes te ayudan a encontrar la propiedad que mejor se adapte a tu presupuesto y propósito.</p>
+      </article>
+
+      <article class="card" aria-labelledby="f2">
+        <h3 id="f2">Búsqueda rápida</h3>
+        <p class="muted">Filtra por zona, precio y características para encontrar opciones en minutos.</p>
+      </article>
+
+      <article class="card" aria-labelledby="f3">
+        <h3 id="f3">Ayuda con el papeleo</h3>
+        <p class="muted">Nos encargamos de contratos y trámites para que te concentres en tu nuevo hogar.</p>
+      </article>
+
+      <article class="card" aria-labelledby="f4">
+        <h3 id="f4">Comunicación constante</h3>
+        <p class="muted">Seguimiento continuo y respuestas claras en cada etapa del proceso.</p>
+      </article>
+    </section>
+
+    <section id="listings" class="listings" aria-labelledby="listings-title">
+      <h2 id="listings-title" style="margin:0 0 12px">Propiedades destacadas</h2>
+      <div class="listing-grid">
+        <article class="listing" aria-labelledby="p1">
+          <img src="assets/prop1.jpg" alt="Departamento moderno con balcones verdes" />
+          <div class="listing-body">
+            <div>
+              <div id="p1" style="font-weight:800">Departamento en Valencia</div>
+              <div class="muted">3 dormitorios · 2 baños · 120 m²</div>
+            </div>
+            <div style="margin-top:auto;display:flex;justify-content:space-between;align-items:center">
+              <div class="price">S/ 420,000</div>
+              <button class="btn" onclick="alert('Contacto para la propiedad')">Ver detalles</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="listing" aria-labelledby="p2">
+          <img src="assets/prop2.jpg" alt="Casa familiar con jardín" />
+          <div class="listing-body">
+            <div>
+              <div id="p2" style="font-weight:800">Casa en las afueras</div>
+              <div class="muted">4 dormitorios · 3 baños · 250 m²</div>
+            </div>
+            <div style="margin-top:auto;display:flex;justify-content:space-between;align-items:center">
+              <div class="price">S/ 780,000</div>
+              <button class="btn" onclick="alert('Contacto para la propiedad')">Ver detalles</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="listing" aria-labelledby="p3">
+          <img src="assets/prop3.jpg" alt="Local comercial en zona céntrica" />
+          <div class="listing-body">
+            <div>
+              <div id="p3" style="font-weight:800">Local comercial céntrico</div>
+              <div class="muted">120 m² · Excelente visibilidad</div>
+            </div>
+            <div style="margin-top:auto;display:flex;justify-content:space-between;align-items:center">
+              <div class="price">S/ 3,200 / mes</div>
+              <button class="btn" onclick="alert('Contacto para la propiedad')">Ver detalles</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="cta-banner" aria-labelledby="cta-title">
+      <div>
+        <h3 id="cta-title" style="margin:0 0 6px">¿Tienes una propiedad para vender o alquilar?</h3>
+        <p class="muted" style="margin:0">Nuestro equipo puede valorar tu inmueble y ayudarte a listar con la mejor estrategia.</p>
+      </div>
+      <div>
+        <button class="btn" onclick="document.getElementById('contacto').scrollIntoView({behavior:'smooth'})">Agenda un asesoramiento</button>
+      </div>
+    </section>
+
+    <section class="contact" id="contacto" aria-labelledby="contacto-title">
+      <div>
+        <h2 id="contacto-title">Contacto</h2>
+        <p class="muted">¿No encuentras lo que buscas? Haz clic y hablemos para entender mejor tus necesidades.</p>
+
+        <form action="mailto:info@penarrubiainmobiliaria.com" method="post" enctype="text/plain" aria-label="Formulario de contacto">
+          <label>
+            <span class="muted">Nombre</span>
+            <input type="text" name="nombre" required />
+          </label>
+          <label>
+            <span class="muted">Correo electrónico</span>
+            <input type="email" name="email" required />
+          </label>
+          <label>
+            <span class="muted">Teléfono</span>
+            <input type="tel" name="telefono" />
+          </label>
+          <label>
+            <span class="muted">Mensaje</span>
+            <textarea name="mensaje" rows="4" required></textarea>
+          </label>
+          <div style="display:flex;gap:10px;align-items:center">
+            <button type="submit" class="btn">Enviar</button>
+            <button type="reset" class="secondary">Limpiar</button>
+          </div>
+        </form>
+      </div>
+
+      <aside class="card" aria-labelledby="info-title">
+        <h3 id="info-title">Información</h3>
+        <p class="muted"><strong>Teléfono</strong><br>📞 948321780</p>
+        <p class="muted"><strong>Email</strong><br>✉️ info@penarrubiainmobiliaria.com</p>
+        <p class="muted"><strong>Dirección</strong><br>Av. El gran marqués 1111</p>
+      </aside>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <div style="font-weight:800">Peñarrubia Inmobiliaria</div>
+        <div class="muted" style="font-size:13px">Especialistas en compra, venta y alquiler en Valencia y alrededores</div>
+      </div>
+      <div class="muted">Copyright © 2026 Todos los derechos reservados</div>
+    </div>
+  </footer>
+
+  <script>
+    // Navegación suave para anclas internas
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        e.preventDefault();
+        const id = a.getAttribute('href').slice(1);
+        const el = document.getElementById(id);
+        if(el) el.scrollIntoView({behavior:'smooth'});
+      });
+    });
+  </script>
+</body>
+</html>
