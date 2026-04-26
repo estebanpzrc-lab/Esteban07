@@ -1,7 +1,12 @@
 * {
     margin: 0;
+    /* / Elimina el espacio por fuera de los elementos / */
     padding: 0;
+    /* / Elimina el espacio por dentro de los elementos / */
     box-sizing: border-box;
+    /* / Hace que el ancho incluya el borde y el espacio interno / */
+    font-family: sans-serif;
+    /* / Define un tipo de letra moderno sin "patitas" / */
 }
 
 :root {
@@ -11,23 +16,96 @@
     --Azul-Pro: #1A3066;
 }
 
-
-
 .quien {
     background-color: var(--azul-corp);
+    /* / Pone el fondo de color azul / */
+    color: white;
+    /* / Cambia el color de la letra a blanco / */
+    display: inline-block;
+    /* / Hace que la caja solo mida lo que mide el texto / */
+    padding: 10px 20px;
+    /* / Agrega aire (espacio) alrededor del texto / */
+    margin: 0 530px;
     text-align: center;
-    margin-bottom: -70px;
-    margin-right: 500px;
-    margin-left: 500px;
 }
 
 .parr {
-    background-color: var(--Azul-Pro);
-    padding: 20px;
-    margin: 50px;
+    background-color: #1a3a6d;
+    /* / Color azul más oscuro para el párrafo / */
     color: white;
-    margin-right: 400px;
-    margin-left: 400px;
-    tex
+    /* / Letra blanca para que resalte / */
+    padding: 40px;
+    /* / Espacio interno grande para que el texto no toque los bordes / */
+    text-align: center;
+    /* / Centra el texto horizontalmente / */
+    max-width: 800px;
+    /* / Evita que el párrafo se estire demasiado en pantallas anchas / */
+    margin: 0 auto;
+    /* / Truco maestro: centra el bloque completo en la pantalla / */
+}
 
+.servicios {
+    display: flex;
+    /* / Activa el modo "Flexbox": pone los hijos uno al lado del otro / */
+    justify-content: center;
+    /* / Centra las cajas en el medio de la pantalla / */
+    gap: 20px;
+    /* / Crea una separación de 20px entre cada caja verde / */
+    padding: 50px;
+    /* / Separa esta sección de la de arriba y abajo / */
+    flex-wrap: wrap;
+    /* / Si el usuario abre la web en un celular, las cajas se bajan una tras otra / */
+}
+
+.servicios div {
+    background-color: var(--verde);
+    /* / El color verde que vimos en tu imagen / */
+    color: white;
+    /* / Letra blanca / */
+    padding: 20px;
+    /* / Espacio interno para que el texto respire / */
+    width: 250px;
+    /* / Define un ancho fijo para que todas las tarjetas sean iguales / */
+    border-radius: 8px;
+    /* / Redondea las esquinas para que se vea moderno / */
+    text-align: center;
+    /* / Centra el título y el párrafo dentro de la tarjeta / */
+}
+
+.ventajas article {
+    background-color: #333;
+    /* / Fondo gris oscuro / */
+    color: white;
+    /* / Letra blanca / */
+    margin: 80px auto;
+    /* / Separa cada ventaja una de otra y las centra / */
+    padding: 20px;
+    /* / Espacio interno / */
+    max-width: 600px;
+    /* / Limita el largo de la barra gris / */
+    border-radius: 0 20px 20px 0;
+    /* / Redondea solo las esquinas de la derecha / */
+}
+
+.ventajas h4 {
+    color: #5db04d;
+    /* / Pone los números (+24, +300) en color verde / */
+    font-size: 1.5rem;
+    /* / Hace que el número se vea más grande que el texto / */
+}
+
+.testimonios {
+    display: flex;
+    /* / Alinea los tres testimonios en fila / */
+    justify-content: space-around;
+    /* / Distribuye el espacio sobrante entre ellos / */
+    padding: 50px;
+    /* / Espacio arriba y abajo de la sección / */
+}
+
+blockquote {
+    width: 30%;
+    /* / Hace que cada opinión ocupe casi un tercio del ancho / */
+    font-style: italic;
+    /* / Pone la letra en cursiva para que parezca una cita / */
 }
