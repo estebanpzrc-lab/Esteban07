@@ -1,0 +1,143 @@
+:root{
+  --green:#2fb24a;
+  --dark:#0b2540;
+  --muted:#6b7a8a;
+  --bg:#f6f8fb;
+  --card:#ffffff;
+  --accent:#0f6b3f;
+  --max-width:1100px;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background:var(--bg);
+  color:#0b1b2b;
+  line-height:1.45;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* Layout container */
+.container{
+  max-width:var(--max-width);
+  margin:0 auto;
+  padding:0 20px;
+}
+
+/* Header / Nav */
+header{
+  background:linear-gradient(90deg, rgba(47,178,74,0.06), rgba(11,37,64,0.02));
+  padding:18px 24px;
+  position:sticky;
+  top:0;
+  z-index:40;
+  border-bottom:1px solid rgba(11,37,64,0.04);
+}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{
+  width:48px;height:48px;border-radius:8px;
+  background:linear-gradient(180deg,var(--green),#1f8a4a);
+  display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;
+  flex:0 0 48px;
+}
+nav ul{
+  display:flex;gap:18px;list-style:none;margin:0;padding:0;align-items:center;
+}
+nav a{color:var(--dark);text-decoration:none;font-weight:600}
+.btn{
+  background:var(--green);color:#fff;padding:10px 14px;border-radius:8px;border:0;cursor:pointer;font-weight:700;
+  transition:transform .12s ease, box-shadow .12s ease;
+}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(47,178,74,0.12)}
+.secondary{
+  background:transparent;border:1px solid rgba(11,37,64,0.08);padding:10px 14px;border-radius:8px;color:var(--dark);text-decoration:none;
+}
+
+/* Hero */
+.hero{
+  display:grid;
+  grid-template-columns:1fr 520px;
+  gap:28px;
+  align-items:center;
+  padding:48px 0;
+}
+.hero-left h1{font-size:28px;margin:0 0 12px}
+.hero-left p{color:var(--muted);margin:0 0 18px}
+.hero-cta{display:flex;gap:12px;align-items:center}
+.hero-right{
+  background:linear-gradient(180deg, rgba(11,37,64,0.04), rgba(11,37,64,0.02));
+  border-radius:12px;padding:12px;display:flex;align-items:center;justify-content:center;
+}
+.hero-right img{width:100%;height:auto;border-radius:8px;display:block;object-fit:cover}
+
+/* Features / Cards */
+.features{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:18px;
+  margin:28px 0;
+}
+.card{
+  background:var(--card);padding:18px;border-radius:12px;
+  box-shadow:0 6px 18px rgba(11,37,64,0.04);
+}
+.card h3{margin:0 0 8px;font-size:16px}
+.muted{color:var(--muted)}
+
+/* Listings */
+.listings{margin:28px 0;display:grid;gap:18px}
+.listing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.listing{
+  background:var(--card);border-radius:12px;overflow:hidden;
+  box-shadow:0 8px 24px rgba(11,37,64,0.04);display:flex;flex-direction:column;
+}
+.listing img{width:100%;height:180px;object-fit:cover}
+.listing-body{padding:14px;flex:1;display:flex;flex-direction:column;gap:8px}
+.price{color:var(--accent);font-weight:800}
+
+/* CTA banner */
+.cta-banner{
+  background:linear-gradient(90deg,var(--dark),#12324a);
+  color:#fff;padding:28px;border-radius:12px;display:flex;align-items:center;justify-content:space-between;gap:18px;margin:28px 0;
+}
+.cta-banner p{margin:0}
+
+/* Contact section */
+.contact{display:grid;grid-template-columns:1fr 320px;gap:18px;margin:28px 0}
+form{
+  background:var(--card);padding:18px;border-radius:12px;display:flex;flex-direction:column;gap:10px;
+}
+input,textarea,select{
+  padding:10px;border-radius:8px;border:1px solid rgba(11,37,64,0.08);width:100%;font-size:14px;
+}
+label span{display:block;margin-bottom:6px;color:var(--muted);font-size:13px}
+
+/* Footer */
+footer{
+  background:#071428;color:#cfe6d6;padding:20px 0;margin-top:28px;
+}
+.footer-grid{display:flex;flex-wrap:wrap;gap:18px;align-items:center;justify-content:space-between}
+
+/* Utilities */
+.hidden{display:none}
+.center{text-align:center}
+
+/* Responsive */
+@media (max-width:900px){
+  .hero{grid-template-columns:1fr;padding:28px 0}
+  .contact{grid-template-columns:1fr}
+  nav ul{display:none}
+  .logo{width:44px;height:44px}
+  .hero-right{order:2}
+}
+
+/* Small screens */
+@media (max-width:480px){
+  .btn{padding:9px 12px;font-size:14px}
+  .hero-left h1{font-size:22px}
+  .listing img{height:150px}
+}
