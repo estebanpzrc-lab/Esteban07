@@ -1,19 +1,25 @@
 * {
+
         padding: 0;
         margin: 0;
         font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-<<<<<<< HEAD
 body{
     background-color: rgb(45, 174, 43)/* Ahora el verde solo vivirá dentro del header */
 
-=======
+
+    padding: 0;
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
 body {
     background: white;
     margin: 0;
     padding: 0;
->>>>>>> 2a729b25ad986d5c06d4bf72d294e6f11e379427
+
 }
 
 header { /* Estilos para el header o encabezado*/
