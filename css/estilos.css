@@ -4,17 +4,24 @@
         font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+<<<<<<< HEAD
 body{
     background-color: rgb(45, 174, 43)/* Ahora el verde solo vivirá dentro del header */
 
+=======
+body {
+    background: white;
+    margin: 0;
+    padding: 0;
+>>>>>>> 2a729b25ad986d5c06d4bf72d294e6f11e379427
 }
 
-header {
-    background-color: rgb(28, 28, 143);
+header { /* Estilos para el header o encabezado*/
+    background-color: rgb(28, 28, 143); /* Ajusta el color según tus necesidades */
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 150px;
+    justify-content: center; /* Centra horizontalmente el contenido del header */
+    align-items: center; /* Centra verticalmente el contenido del header */
+    height: 140px; /* Ajusta la altura del header según tus necesidades */
 }   
 
 .logo-container {
@@ -163,11 +170,14 @@ nav li a:hover {
     transform: translateY(0);
     box-shadow: none;
 }
-
+.page-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    background: white;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
 .portada-container {
     width: 100%;
-    height: 500px;
-    overflow: hidden;   /* evita que la imagen se salga */
 }
 
 .portada {
@@ -181,4 +191,442 @@ img {
     width: 90px;
 
 }
+.servicios-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 20px;
+    background: white;
+    width: 100%;              /* añade esto */
+    box-sizing: border-box;   /* añade esto */
+}
 
+.banner {
+    background: transparent;
+    padding: 16px;
+    flex: 1;                  /* que cada bloque crezca igual */
+    min-width: 180px;
+    box-sizing: border-box;
+    max-width: none;          /* quita el max-width anterior */
+}
+
+.banner-inner {
+    display: flex;
+    flex-direction: column;    /* columna */
+    gap: 8px;
+}
+
+.banner-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;                 /* ícono y título en la misma línea */
+}
+
+.icon-circle {
+    background: #f0f0f0;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.icon-circle svg {
+    stroke: #22b14c;
+    width: 22px;
+    height: 22px;
+}
+
+.banner-text h3 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 700;
+    color: #111;
+    font-family: Arial, sans-serif;
+}
+
+.banner-text p {
+    margin: 0;
+    font-size: 11px;
+    color: #444;
+    line-height: 1.5;
+    font-family: Arial, sans-serif;
+}
+
+.cta-container {
+    background: #1e3a5f;
+    padding: 40px 20px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.cta-container p {
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    margin: 0 0 20px 0;
+}
+
+.cta-btn {
+    display: inline-block;
+    background: #22b14c;
+    color: white;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    font-weight: 600;
+    padding: 12px 28px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.cta-btn:hover {
+    background: #1a9040;
+}
+
+
+.alquiler-container {
+    display: flex;
+    align-items: stretch;  /* cambia center por stretch */
+    width: 100%;
+    box-sizing: border-box;
+    background: white;
+    min-height: 350px;     /* añade altura mínima */
+}
+
+.alquiler-img {
+    width: 50%;
+    flex-shrink: 0;
+    overflow: hidden;
+    min-height: 350px;     /* añade esto */
+}
+
+.alquiler-img img {
+    width: 100%;
+    height: 350px;         /* altura fija */
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.alquiler-text {
+    width: 50%;
+    padding: 40px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* centra el texto verticalmente */
+}
+
+.alquiler-text h2 {
+    font-size: 26px;
+    font-weight: 700;
+    color: #111;
+    font-family: Arial, sans-serif;
+    margin: 0 0 16px 0;
+    line-height: 1.3;
+}
+
+.alquiler-text p {
+    font-size: 14px;
+    color: #444;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0 0 20px 0;
+}
+
+.alquiler-btn {
+    color: #22b14c;
+    font-size: 15px;
+    font-weight: 700;
+    font-family: Arial, sans-serif;
+    text-decoration: none;
+}
+
+.alquiler-btn:hover {
+    text-decoration: underline;
+}
+
+.cta2-container {
+    background: #1e3a5f;
+    padding: 50px 20px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.cta2-container h2 {
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+    font-family: Arial, sans-serif;
+    margin: 0 0 12px 0;
+}
+
+.cta2-container p {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0 0 24px 0;
+}
+
+.cta2-btn {
+    background: #22b14c;
+    color: white;
+    font-size: 15px; /* Ajusta el tamaño según tus necesidades */
+    font-weight: 600; /* Ajusta el peso según tus necesidades */
+    font-family: Arial, sans-serif;
+    padding: 14px 32px; /* Ajusta el padding para un mejor tamaño del botón */
+    border: none; 
+    border-radius: 6px; /* Ajusta el borde para un diseño más moderno */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+
+.cta2-btn:hover {
+    background: #1a9040;
+}
+
+.vender-container {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    width: 100%;
+    box-sizing: border-box;
+    background: white;
+    border-top: 4px solid #1e3a5f;    /* línea azul arriba */
+    border-bottom: 4px solid #1e3a5f; /* línea azul abajo */
+}
+
+.vender-text {
+    width: 45%;
+    padding: 50px 40px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.vender-text h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #111;
+    font-family: Arial, sans-serif;
+    margin: 0 0 20px 0;
+    line-height: 1.3;
+}
+
+.vender-text p {
+    font-size: 14px;
+    color: #444;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.vender-img {
+    width: 50%;
+    flex-shrink: 0;
+    overflow: hidden;
+    padding: 20px;           /* añade espacio alrededor */
+    box-sizing: border-box;
+}
+
+.vender-img img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+    border-radius: 8px;      /* opcional, bordes redondeados */
+}
+
+.profesionales-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    background: #1e3a5f;
+}
+
+.profesionales-img {
+    width: 45%;
+    flex-shrink: 0;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.profesionales-img img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    display: block;
+    border-radius: 8px;
+}
+
+.profesionales-text {
+    width: 55%;
+    padding: 50px 40px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.profesionales-text h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0 0 24px 0;
+    line-height: 1.3;
+    text-align: center;
+}
+
+.profesionales-text p {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.85);
+    font-family: Arial, sans-serif;
+    line-height: 1.7;
+    margin: 0 0 16px 0;
+}
+
+.valor-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    background: #249e09;
+}
+
+.valor-text {
+    width: 55%;
+    padding: 50px 40px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.valor-text h2 {
+    font-size: 26px;
+    font-weight: 700;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0 0 24px 0;
+    line-height: 1.3;
+}
+
+.valor-text p {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.85);
+    font-family: Arial, sans-serif;
+    line-height: 1.7;
+    margin: 0 0 16px 0;
+}
+
+.valor-img {
+    width: 45%;
+    flex-shrink: 0;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.valor-img img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    display: block;
+    border-radius: 8px;
+}
+
+.footer {
+    background: #2a5298;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.footer-inner {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 40px 30px 20px 30px;
+    box-sizing: border-box;
+}
+
+.footer-col {
+    flex: 1;
+}
+
+.footer-logo {
+    width: 80px;
+    margin-bottom: 12px;
+    display: block;
+}
+
+.footer-col p {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.85);
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.footer-contacto h3 {
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: Arial, sans-serif;
+    margin: 0 0 16px 0;
+}
+
+.footer-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.footer-item span {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 13px;
+    font-family: Arial, sans-serif;
+}
+
+.footer-icon {
+    width: 20px;
+    height: 20px;
+    stroke: white;
+    fill: none;
+    flex-shrink: 0;
+}
+
+.footer-direccion {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 8px;
+    color: rgba(255, 255, 255, 0.85) !important;
+    font-size: 13px;
+    font-family: Arial, sans-serif;
+}
+
+.footer-copyright {
+    text-align: center;
+    padding: 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-copyright p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 12px;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
