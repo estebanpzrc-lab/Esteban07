@@ -5,33 +5,50 @@
     <meta charset="UTF-8">
     <title>Sobre Nosotros - Inmobiliaria</title>
     <link rel="stylesheet" href="css/micss.css">
+    <link rel="stylesheet" href="/css/estilos.css">
 </head>
 
-<body>
+<body class="body1">
 
-    <header>
-        <nav>
-            <img src="logo.png" alt="Logo Inmobiliaria">
-            <ul>
-                <li>Inicio</li>
-                <li>Vender</li>
-                <li>Quiénes somos</li>
-                <li>Blog</li>
-            </ul>
-            <button>Contacto</button>
-        </nav>
+   <header class="navbar">
+        <div class="logo-container">
+            <img src="img/logo.png" alt="Logo" class="logo">
+            <nav> <!-- Desde aqui empieza el menu de navegacion -->
+                <ul class="nav-links1"> <!-- Aquie empiezan las listas de navegacion que aparece en el menu-->
+                    <li>
+                        <a href="#">Inicio</a>
+                    </li>
+                    <li class="dropdown1">
+                            <a href="#">Vender <span class="arrow">⌵</span></a>
+                    
+                        <ul class="submenu">
+                            <li><a href="#">Comprar</a></li>
+                            <li><a href="#">Alquilar</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="active">Quiénes somos</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </nav>
+        </div>
+        <button class="btn-contacto">Contacto</button>
+
     </header>
 
     <main>
+        <img src="/img/portada2.webp" alt="portada2" class="portada2">
         <section>
-            <h1 class="quien">Quiénes somos</h1>
+<div class="informacion">
+           <h1 class="quien">Quiénes somos</h1>
             <p class="parr">
                 Somos una empresa especializada en brindar servicios de compra, venta y alquiler de todo tipo de
                 propiedades residenciales y comerciales. Ofrecemos soluciones inmobiliarias personalizadas, altamente
                 confiables y ajustables a cualquier tipo de presupuesto y propósito.</p>
-        </section>
-
+</div>
         <section>
+    
+
+        <section class="servicios">
             <div>
                 <h3>Comprar</h3>
                 <p>Ofrecemos la más amplia gama de inmuebles en Valencia y sus alrededores...</p>
@@ -47,7 +64,7 @@
             </div>
         </section>
 
-        <section>
+        <section class="ventajas">
             <h2>Nuestras ventajas</h2>
 
             <article>
@@ -66,8 +83,8 @@
                 <p>Cada día son más los que encuentran en nosotros la solución para lo que estaban buscando...</p>
             </article>
         </section>
-
-        <section>
+        
+        <section class="testimonios">
             <h2>Lo que dicen de nosotros</h2>
             <blockquote>
                 <p>Inmobiliaria es increíble, no solo consiguieron la vivienda que esperaba sino que me acompañaron en

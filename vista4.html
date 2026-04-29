@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Contacto</title>
+    <link rel="stylesheet" href="css/vist4.css">
+
+<head>
+
+<body>
+           
+   <header class="navbar">
+        <div class="logo-container">
+            <img src="img/logo.png" alt="Logo" class="logo">
+            <nav> <!-- Desde aqui empieza el menu de navegacion -->
+                <ul class="nav-links"> <!-- Aquie empiezan las listas de navegacion que aparece en el menu-->
+                    <li>
+                        <a href="#">Inicio</a>
+                    </li>
+                    <li class="dropdown">
+                            <a href="#">Vender <span class="arrow">⌵</span></a>
+                    
+                        <ul class="submenu">
+                            <li><a href="#">Comprar</a></li>
+                            <li><a href="#">Alquilar</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="active">Quiénes somos</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </nav>
+        </div>
+        <button class="btn-contacto">Contacto</button>
+    <header>
+    
+    <div class="contenedor-formulario">
+        <h2>Ponte <span class="subrayado-verde">en Contacto</span></h2>
+
+        <form action="#" method="POST">
+            <div class="fila-doble">
+                <input type="text" placeholder="Nombre" required>
+                <input type="text" placeholder="Apellido" required>
+            </div>
+
+            <input type="email" placeholder="Correo electrónico" required>
+
+            <input type="tel" placeholder="Teléfono">
+
+            <div class="contenedor-select">
+                <select>
+                    <option value="" disabled selected hidden>Comprar</option>
+                    <option value="opcion1">Opción 1</option>
+                    <option value="opcion2">Opción 2</option>
+                </select>
+            </div>
+
+            <textarea placeholder="Comentarios" rows="5"></textarea>
+
+            <button type="submit" class="btn-enviar">Enviar</button>
+        </form>
+    </div>
+
+</body>
+
+</html>
