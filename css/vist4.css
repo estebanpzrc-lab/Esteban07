@@ -1,0 +1,271 @@
+/* Reseteo básico para que se vea igual en todos los navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4; /* Fondo gris claro para contrastar la tarjeta */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Contenedor principal (la tarjeta blanca) */
+.contenedor-formulario {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 450px;
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Título */
+.contenedor-formulario h2 {
+    text-align: center;
+    font-size: 22px;
+    color: #000;
+    margin-bottom: 30px;
+}
+
+/* Subrayado verde debajo del texto */
+.subrayado-verde {
+    border-bottom: 3px solid #32a852;
+    padding-bottom: 2px;
+}
+
+/* Fila para los inputs de Nombre y Apellido */
+.fila-doble {
+    display: flex;
+    gap: 15px; /* Espacio entre los dos campos */
+    margin-bottom: 15px;
+}
+
+.fila-doble input {
+    width: 50%;
+}
+
+/* Estilos generales para inputs, select y textarea */
+input, select, textarea {
+    width: 100%;
+    background-color: #e6e6e6; /* Fondo gris claro */
+    border: 1px solid #dcdcdc; /* Borde muy sutil */
+    padding: 12px 15px;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #333;
+    outline: none;
+    margin-bottom: 15px;
+}
+
+/* Cambiar el color del texto de relleno (placeholder) */
+input::placeholder, textarea::placeholder {
+    color: #666;
+}
+
+/* Ajustes específicos para el Select (menú desplegable) */
+.contenedor-select {
+    position: relative;
+}
+
+select {
+    appearance: none; /* Quita la flecha por defecto del navegador */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+}
+
+/* Flecha personalizada para el select */
+.contenedor-select::after {
+    content: "⌄";
+    font-size: 24px;
+    color: #555;
+    position: absolute;
+    right: 15px;
+    top: 5px;
+    pointer-events: none;
+}
+
+/* Ajustes específicos para el área de texto */
+textarea {
+    resize: none; /* Evita que el usuario cambie el tamaño libremente */
+}
+
+/* Botón de Enviar */
+.btn-enviar {
+    background-color: #32a852; /* Color verde */
+    color: white;
+    border: none;
+    padding: 12px 40px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    display: block;
+    margin: 10px auto 0 auto; /* Centrar el botón */
+    transition: background-color 0.3s ease;
+}
+
+.btn-enviar:hover {
+    background-color: #288a42; /* Verde más oscuro al pasar el mouse */
+}
+
+
+header {
+    background-color: rgb(28, 28, 143);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+}   
+
+.logo-container {
+    display: flex; /* Establece el contenedor como un flexbox */
+    justify-content: space-between; /* Centra horizontalmente los elementos dentro del contenedor */
+    align-items: center; /* Centra verticalmente los elementos dentro del contenedor */
+    gap: 450px; /* Ajusta el valor según tus necesidades */
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+    padding: 0 2rem; /* Agrega un poco de espacio a los lados del contenedor */
+    height: 150px; /* Asegura que el contenedor tenga la misma altura que el header */
+}
+
+nav {
+    display: flex;
+    align-items: center; /* Ajusta el espacio entre los enlaces */
+    
+    
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links li {
+    position: relative; /* Establece la posición relativa para el elemento de la lista */
+}
+nav li a{
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: white; /* Ajusta el color según tus necesidades */
+    font-size: 20px; /* Ajusta el valor según tus necesidades */
+    font-weight: 600; /* Ajusta el valor según tus necesidades */
+    border-bottom: 2px solid transparent; /* Agrega un borde inferior transparente para el efecto hover */
+    transition: border-color .4s ease; /* Agrega una transición suave para el efecto hover */
+    display: block;
+    
+}
+
+nav li a:hover {
+    border-bottom: 2px solid white; /* Cambia el color del borde inferior al hacer hover */
+}
+.menu{
+    list-style: none; /* Elimina los puntos de la lista */
+    display: flex;
+    gap: 2rem;
+}
+
+/*Menu con dropdown*/
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+/*PADRE*/
+.menu li {
+    position: relative; /* Establece la posición relativa para el elemento de la lista */
+
+}
+
+/*links*/
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/*Submenu oculto*/
+.submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    min-width: 160px;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+
+    /* Animación slide down */
+    max-height: 0;             /* ← empieza colapsado */
+    overflow: hidden;          /* ← oculta el contenido */
+    opacity: 0;
+    transition: max-height 0.35s ease, opacity 0.3s ease, padding 0.3s ease;
+}
+
+.submenu li a {
+    display: block;
+    padding: 10px 16px;
+    color: black;
+    font-size: 15px;
+    font-weight: 400;
+    text-decoration: none;
+    transition: background 0.2s ease;
+}
+
+.submenu li a:hover {
+    background: #f2f2f2;
+}
+
+.dropdown:hover .submenu {
+    max-height: 200px;         /* ← se expande hacia abajo */
+    opacity: 1;
+    padding: 6px 0;
+}
+
+.arrow {
+  display: inline-block;
+  transition: transform 0.3s;
+  font-size: 12px;
+  margin-left: 4px;
+}
+
+.dropdown:hover .arrow {
+  transform: rotate(180deg);
+}
+
+.btn-contacto {
+    background-color: #22c55e;
+    color: white;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 999px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+
+    /* Esto es importante para que se vea bien en <button> */
+    outline: none;
+    font-family: inherit;   /* ← los <button> no heredan la fuente automáticamente */
+    line-height: 1;
+}
+
+.btn-contacto:hover {
+    background-color: #16a34a;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(34, 197, 94, 0.4);
+}
+
+.btn-contacto:active {
+    transform: translateY(0);
+    box-shadow: none;
+}

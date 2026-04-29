@@ -1,30 +1,21 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0;         /* / Elimina el espacio por fuera de los elementos / */
+    padding: 0;        /* / Elimina el espacio por dentro de los elementos / */
+    box-sizing: border-box; /* / Hace que el ancho incluya el borde y el espacio interno / */
+    font-family: sans-serif; /* / Define un tipo de letra moderno sin "patitas" / */
+}
+.body1{
+    background-color: white;
 }
 
 :root {
     --verde: #4CAF50;
     --Verde-Osc: #388E3C;
     --azul-corp: #3F5EB9;
-    --Azul-Pro: #1A3066;
-}
-
-
-
-.quien {
-    background-color: var(--azul-corp);
-    text-align: center;
-    margin-bottom: -70px;
-    margin-right: 500px;
-    margin-left: 500px;
-}
-
-.parr {
-    background-color: var(--Azul-Pro);
-    padding: 20px;
-    margin: 50px;
+    --Azul-Pro: #1A3066;}
+.informacion{
+    position: relative; /* ¡CLAVE! Esto convierte a la caja en el punto de referencia */
+    background-color: #1a3c61; /* El color azul de tu recuadro */
     color: white;
     margin-right: 400px;
     margin-left: 400px;
@@ -67,4 +58,96 @@
 blockquote {
     width: 30%;                 /* / Hace que cada opinión ocupe casi un tercio del ancho / */
     font-style: italic;         /* / Pone la letra en cursiva para que parezca una cita / */
+    text-align: center;
+    padding: 35px 30px 30px 30px; /* Da más espacio arriba (50px) para que el título no tape el texto */
+    width: 50%; /* O el ancho que estés manejando (ej. max-width: 800px) */
+    margin: -70px auto 0 auto; /* Centra la caja y da espacio arriba para que sobresalga la etiqueta */
+}
+.quien {
+position: absolute; /* Se mueve libremente, pero SOLO dentro de los límites de .caja-informativa */
+    
+    /* Con estas tres líneas lo centras perfectamente en el borde superior: */
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    
+    /* Estilos visuales de tu recuadro */
+    background-color: #2452a3; /* El color azul del recuadro pequeño */
+    color: white;
+    padding: 10px 25px;
+    font-size: 20px;
+    font-weight: bold;
+    white-space: nowrap; /* Evita que el texto del botón se parta en dos líneas */
+}
+    
+
+.servicios {
+    display: flex;
+    /* / Activa el modo "Flexbox": pone los hijos uno al lado del otro / */
+    justify-content: center;
+    /* / Centra las cajas en el medio de la pantalla / */
+    gap: 20px;
+    /* / Crea una separación de 20px entre cada caja verde / */
+    padding: 50px;
+    /* / Separa esta sección de la de arriba y abajo / */
+    flex-wrap: wrap;
+    /* / Si el usuario abre la web en un celular, las cajas se bajan una tras otra / */
+}
+
+.servicios div {
+    background-color: var(--verde);
+    /* / El color verde que vimos en tu imagen / */
+    color: white;
+    /* / Letra blanca / */
+    padding: 20px;
+    /* / Espacio interno para que el texto respire / */
+    width: 250px;
+    /* / Define un ancho fijo para que todas las tarjetas sean iguales / */
+    border-radius: 8px;
+    /* / Redondea las esquinas para que se vea moderno / */
+    text-align: center;
+    /* / Centra el título y el párrafo dentro de la tarjeta / */
+}
+
+.ventajas article {
+    background-color: #333;
+    /* / Fondo gris oscuro / */
+    color: white;
+    /* / Letra blanca / */
+    margin: 80px auto;
+    /* / Separa cada ventaja una de otra y las centra / */
+    padding: 20px;
+    /* / Espacio interno / */
+    max-width: 600px;
+    /* / Limita el largo de la barra gris / */
+    border-radius: 0 20px 20px 0;
+    /* / Redondea solo las esquinas de la derecha / */
+}
+git
+.ventajas h4 {
+    color: #5db04d;
+    /* / Pone los números (+24, +300) en color verde / */
+    font-size: 1.5rem;
+    /* / Hace que el número se vea más grande que el texto / */
+}
+
+.testimonios {
+    display: flex;
+    /* / Alinea los tres testimonios en fila / */
+    justify-content: space-around;
+    /* / Distribuye el espacio sobrante entre ellos / */
+    padding: 50px;
+    /* / Espacio arriba y abajo de la sección / */
+}
+
+blockquote {
+    width: 30%;
+    /* / Hace que cada opinión ocupe casi un tercio del ancho / */
+    font-style: italic;
+    /* / Pone la letra en cursiva para que parezca una cita / */
+}
+.portada2{
+        width: 100%;
+    height: 450;
+    overflow: hidden;   /* evita que la imagen se salga */
 }
