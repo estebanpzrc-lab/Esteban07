@@ -28,6 +28,43 @@
     color: white;
     margin-right: 400px;
     margin-left: 400px;
-    tex
+}
+.servicios {
+    display: flex;           /* / Activa el modo "Flexbox": pone los hijos uno al lado del otro / */
+    justify-content: center; /* / Centra las cajas en el medio de la pantalla / */
+    gap: 20px;               /* / Crea una separación de 20px entre cada caja verde / */
+    padding: 50px;           /* / Separa esta sección de la de arriba y abajo / */
+    flex-wrap: wrap;         /* / Si el usuario abre la web en un celular, las cajas se bajan una tras otra / */
+}
 
+.servicios div {
+    background-color: #5db04d; /* / El color verde que vimos en tu imagen / */
+    color: white;              /* / Letra blanca / */
+    padding: 20px;             /* / Espacio interno para que el texto respire / */
+    width: 250px;              /* / Define un ancho fijo para que todas las tarjetas sean iguales / */
+    border-radius: 8px;        /* / Redondea las esquinas para que se vea moderno / */
+    text-align: center;        /* / Centra el título y el párrafo dentro de la tarjeta / */
+}
+.ventajas article {
+    background-color: #333;     /* / Fondo gris oscuro / */
+    color: white;               /* / Letra blanca / */
+    margin: 15px auto;          /* / Separa cada ventaja una de otra y las centra / */
+    padding: 20px;              /* / Espacio interno / */
+    max-width: 600px;           /* / Limita el largo de la barra gris / */
+    border-radius: 0 50px 50px 0; /* / Redondea solo las esquinas de la derecha / */
+}
+
+.ventajas h4 {
+    color: #5db04d;             /* / Pone los números (+24, +300) en color verde / */
+    font-size: 1.5rem;          /* / Hace que el número se vea más grande que el texto / */
+}
+.testimonios {
+    display: flex;              /* / Alinea los tres testimonios en fila / */
+    justify-content: space-around; /* / Distribuye el espacio sobrante entre ellos / */
+    padding: 50px;              /* / Espacio arriba y abajo de la sección / */
+}
+
+blockquote {
+    width: 30%;                 /* / Hace que cada opinión ocupe casi un tercio del ancho / */
+    font-style: italic;         /* / Pone la letra en cursiva para que parezca una cita / */
 }
