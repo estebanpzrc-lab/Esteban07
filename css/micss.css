@@ -33,20 +33,15 @@
 .informacion {
     position: relative;
     /* ¡CLAVE! Esto convierte a la caja en el punto de referencia */
-    background-color: #1a3c61;
-    /* El color azul de tu recuadro */
     color: white;
-
     text-align: center;
-    padding: 35px 30px 30px 30px;
+    padding: 0px 30px 30px 30px;
     /* Da más espacio arriba (50px) para que el título no tape el texto */
-    width: 50%;
+    width: 80%;
     /* O el ancho que estés manejando (ej. max-width: 800px) */
-    margin: -70px auto 0 auto;
+    margin: -60px auto 0 auto;
     /* Centra la caja y da espacio arriba para que sobresalga la etiqueta */
-
-    margin-right: 400px;
-    margin-left: 400px;
+   
 }
 
 .servicios {
