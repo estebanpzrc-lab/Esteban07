@@ -43,6 +43,40 @@
     /* Centra la caja y da espacio arriba para que sobresalga la etiqueta */
    
 }
+.quien {
+    position: absolute;
+    /* Se mueve libremente, pero SOLO dentro de los límites de .caja-informativa */
+
+    /* Con estas tres líneas lo centras perfectamente en el borde superior: */
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    /* Estilos visuales de tu recuadro */
+    background-color: #2452a3;
+    /* El color azul del recuadro pequeño */
+    color: white;
+    padding: 10px 25px;
+    font-size: 20px;
+    font-weight: bold;
+    white-space: nowrap;
+    /* Evita que el texto del botón se parta en dos líneas */
+
+}
+
+.parr {
+    background-color: #1a3a6d;
+    /* / Color azul más oscuro para el párrafo / */
+    color: white;
+    /* / Letra blanca para que resalte / */
+    padding: 40px;
+    /* / Espacio interno grande para que el texto no toque los bordes / */
+    /* / Centra el texto horizontalmente / */
+    max-width: 800px;
+    /* / Evita que el párrafo se estire demasiado en pantallas anchas / */
+    margin: 0 auto;
+    /* / Truco maestro: centra el bloque completo en la pantalla / */
+}
 
 .servicios {
     display: flex;
@@ -76,7 +110,7 @@
 .ventajas article {
     background-color: #333;
     /* / Fondo gris oscuro / */
-    color: white;
+    color: rgb(255, 0, 0);
     /* / Letra blanca / */
     margin: 15px auto;
     /* / Separa cada ventaja una de otra y las centra / */
@@ -86,6 +120,14 @@
     /* / Limita el largo de la barra gris / */
     border-radius: 0 50px 50px 0;
     /* / Redondea solo las esquinas de la derecha / */
+}
+.nvj{
+    background-color: var(--azul-corp);
+   margin: 0px 450px 0px 0px ; 
+   color: white;
+    border-radius: 0 15px 15px 0;
+    padding: 10px; 
+
 }
 
 .ventajas h4 {
@@ -117,43 +159,6 @@ blockquote {
     margin: -70px auto 0 auto;
     /* Centra la caja y da espacio arriba para que sobresalga la etiqueta */
 }
-
-.quien {
-    position: absolute;
-    /* Se mueve libremente, pero SOLO dentro de los límites de .caja-informativa */
-
-    /* Con estas tres líneas lo centras perfectamente en el borde superior: */
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    /* Estilos visuales de tu recuadro */
-    background-color: #2452a3;
-    /* El color azul del recuadro pequeño */
-    color: white;
-    padding: 10px 25px;
-    font-size: 20px;
-    font-weight: bold;
-    white-space: nowrap;
-    /* Evita que el texto del botón se parta en dos líneas */
-
-}
-
-.parr {
-    background-color: #1a3a6d;
-    /* / Color azul más oscuro para el párrafo / */
-    color: white;
-    /* / Letra blanca para que resalte / */
-    padding: 40px;
-    /* / Espacio interno grande para que el texto no toque los bordes / */
-    text-align: center;
-    /* / Centra el texto horizontalmente / */
-    max-width: 800px;
-    /* / Evita que el párrafo se estire demasiado en pantallas anchas / */
-    margin: 0 auto;
-    /* / Truco maestro: centra el bloque completo en la pantalla / */
-}
-
 
 .servicios {
     display: flex;
