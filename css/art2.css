@@ -1,85 +1,227 @@
 * {
-    margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont,
-        'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
-        'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-/* VARIABLES basadas en el CSS principal */
-:root {
-    --primary: #1a2fad;
-    --secondary: #2a5298;
-    --dark-section: #1e3a5f;
-    --accent: #22c55e;
-    --accent-hover: #16a34a;
-    --light: #ffffff;
-    --bg: white;
-    --text: #222;
-    --text-light: #666;
-    --shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 body {
-    background-color: var(--bg);
-    color: var(--text);
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    background-color: rgb(45, 174, 43)
+        /* Ahora el verde solo vivirá dentro del header */
 }
 
-/* ================= HEADER ================= */
+body {
+    background: white;
+    margin: 0;
+    padding: 0;
 
-.header {
-    background-color: var(--primary);
+}
+
+header {
+    /* Estilos para el header o encabezado*/
+    background-color: rgb(28, 28, 143);
+    /* Ajusta el color según tus necesidades */
+    display: flex;
+    justify-content: center;
+    /* Centra horizontalmente el contenido del header */
+    align-items: center;
+    /* Centra verticalmente el contenido del header */
+    height: 140px;
+    /* Ajusta la altura del header según tus necesidades */
+}
+
+.logo-container {
+    display: flex;
+    /* Establece el contenedor como un flexbox */
+    justify-content: space-between;
+    /* Centra horizontalmente los elementos dentro del contenedor */
+    align-items: center;
+    /* Centra verticalmente los elementos dentro del contenedor */
+    gap: 450px;
+    /* Ajusta el valor según tus necesidades */
+    width: 100%;
+    /* Asegura que el contenedor ocupe todo el ancho disponible */
+    padding: 0 2rem;
+    /* Agrega un poco de espacio a los lados del contenedor */
+    height: 150px;
+    /* Asegura que el contenedor tenga la misma altura que el header */
+}
+
+nav {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 0 40px;
-    height: 110px;
+    /* Ajusta el espacio entre los enlaces */
+
+
 }
 
-.logo img {
-    width: 90px;
-    height: 90px;
-    object-fit: contain;
-    background: white;
-    border-radius: 8px;
-}
-
-.nav {
+.nav-links {
     display: flex;
-    gap: 35px;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
 }
 
-.nav a {
-    color: white;
+.nav-links li {
+    position: relative;
+    /* Establece la posición relativa para el elemento de la lista */
+}
+
+nav li a {
     text-decoration: none;
+    /* Elimina el subrayado de los enlaces */
+    color: white;
+    /* Ajusta el color según tus necesidades */
+    font-size: 20px;
+    /* Ajusta el valor según tus necesidades */
+    font-weight: 600;
+    /* Ajusta el valor según tus necesidades */
+    border-bottom: 2px solid transparent;
+    /* Agrega un borde inferior transparente para el efecto hover */
+    transition: border-color .4s ease;
+    /* Agrega una transición suave para el efecto hover */
+    display: block;
+
+}
+
+nav li a:hover {
+    border-bottom: 2px solid white;
+    /* Cambia el color del borde inferior al hacer hover */
+}
+
+.menu {
+    list-style: none;
+    /* Elimina los puntos de la lista */
+    display: flex;
+    gap: 2rem;
+}
+
+/*Menu con dropdown*/
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+/*PADRE*/
+.menu li {
+    position: relative;
+    /* Establece la posición relativa para el elemento de la lista */
+
+}
+
+/*links*/
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/*Submenu oculto*/
+.submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    min-width: 160px;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+
+    /* Animación slide down */
+    max-height: 0;
+    /* ← empieza colapsado */
+    overflow: hidden;
+    /* ← oculta el contenido */
+    opacity: 0;
+    transition: max-height 0.35s ease, opacity 0.3s ease, padding 0.3s ease;
+}
+
+.submenu li a {
+    display: block;
+    padding: 10px 16px;
+    color: black;
+    font-size: 15px;
+    font-weight: 400;
+    text-decoration: none;
+    transition: background 0.2s ease;
+}
+
+.submenu li a:hover {
+    background: #f2f2f2;
+}
+
+.dropdown:hover .submenu {
+    max-height: 200px;
+    /* ← se expande hacia abajo */
+    opacity: 1;
+    padding: 6px 0;
+}
+
+.arrow {
+    display: inline-block;
+    transition: transform 0.3s;
+    font-size: 12px;
+    margin-left: 4px;
+}
+
+.dropdown:hover .arrow {
+    transform: rotate(180deg);
+}
+
+.btn-contacto {
+    background-color: #22c55e;
+    color: white;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 999px;
     font-size: 16px;
     font-weight: 600;
-    border-bottom: 2px solid transparent;
-    transition: 0.3s ease;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+
+    /* Esto es importante para que se vea bien en <button> */
+    outline: none;
+    font-family: inherit;
+    /* ← los <button> no heredan la fuente automáticamente */
+    line-height: 1;
 }
 
-.nav a:hover {
-    border-bottom: 2px solid white;
-}
-
-.header-btn a {
-    background-color: var(--accent);
-    color: white;
-    text-decoration: none;
-    padding: 12px 24px;
-    border-radius: 999px;
-    font-size: 15px;
-    font-weight: 600;
-    transition: 0.3s ease;
-}
-
-.header-btn a:hover {
-    background-color: var(--accent-hover);
+.btn-contacto:hover {
+    background-color: #16a34a;
     transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(34, 197, 94, 0.4);
+}
+
+.btn-contacto:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+.page-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    background: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.portada-container {
+    width: 100%;
+}
+
+.portada {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+img {
+    width: 90px;
+
 }
 
 /* ================= HERO ================= */
@@ -188,91 +330,225 @@ main {
 }
 
 /* ================= FOOTER ================= */
-
+/* PIE */
 .footer {
-    background-color: var(--secondary);
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    gap: 40px;
-    padding: 45px 50px;
-    margin-top: auto;
-    flex-wrap: wrap;
-}
-
-.footer-box {
-    flex: 1;
-    min-width: 250px;
-}
-
-.logo-box img {
-    width: 90px;
-    margin-bottom: 15px;
-    background: white;
-    border-radius: 8px;
-}
-
-.logo-box p,
-.contact-box p,
-.map-box p {
-    font-size: 14px;
-    line-height: 1.7;
-    color: rgba(255, 255, 255, 0.85);
-}
-
-.contact-box h3 {
-    margin-bottom: 15px;
-    font-size: 18px;
-}
-
-.contact-box p {
-    margin-bottom: 10px;
-}
-
-.map-box img {
+    background: #2a5298;
     width: 100%;
-    max-width: 220px;
-    height: 140px;
-    object-fit: cover;
+    box-sizing: border-box;
+}
+
+.footer-inner {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 40px 30px 20px 30px;
+    box-sizing: border-box;
+}
+
+.footer-col {
+    flex: 1;
+}
+
+.footer-logo {
+    width: 80px;
     margin-bottom: 12px;
-    border-radius: 8px;
+    display: block;
 }
 
-/* ================= COPYRIGHT ================= */
-
-.copyright {
-    background-color: var(--primary);
-    color: white;
-    text-align: center;
-    padding: 15px;
+.footer-col p {
     font-size: 13px;
+    color: rgba(255, 255, 255, 0.85);
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
 }
 
-/* ================= RESPONSIVE ================= */
+.footer-contacto h3 {
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: Arial, sans-serif;
+    margin: 0 0 16px 0;
+}
+
+.footer-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.footer-item span {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 13px;
+    font-family: Arial, sans-serif;
+}
+
+.footer-icon {
+    width: 20px;
+    height: 20px;
+    stroke: white;
+    fill: none;
+    flex-shrink: 0;
+}
+
+.footer-direccion {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 8px;
+    color: rgba(255, 255, 255, 0.85) !important;
+    font-size: 13px;
+    font-family: Arial, sans-serif;
+}
+
+.footer-copyright {
+    text-align: center;
+    padding: 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-copyright p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 12px;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+
+/* ---- PROPIEDADES ---- */
+
+.propiedades-seccion {
+  max-width: 1200px; /* Ancho máximo para centrar el contenido */
+  margin: 40px auto; /* Centra la sección y agrega espacio arriba y abajo */
+  padding: 0 20px; /* Espacio horizontal para que no toque los bordes en pantallas pequeñas */
+}
+
+.propiedades-seccion h1 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #1a2fad;
+}
+
+.propiedades-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.filtros {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.filtro-btn {
+  padding: 8px 20px;
+  border-radius: 6px;
+  border: 2px solid #1a2fad;
+  background: white;
+  color: #1a2fad;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.filtro-btn:hover {
+  background: #1a2fad;
+  color: white;
+}
+
+.filtro-btn.activo {
+  background: #1a2fad;
+  color: white;
+}
+
+.prop-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  transition: transform 0.2s;
+}
+
+.prop-card:hover {
+  transform: translateY(-4px);
+}
+
+.prop-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.prop-info {
+  padding: 15px;
+}
+
+.prop-info h3 {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.prop-ubicacion {
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 8px;
+}
+
+.prop-precio {
+  font-size: 17px;
+  font-weight: bold;
+  color: #1a2fad;
+  margin-bottom: 8px;
+}
+
+.prop-detalles {
+  font-size: 12px;
+  color: #666;
+}
+
+.prop-btn {
+  display: inline-block;
+  background: #1a2fad;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.prop-botones {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.prop-disponible {
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: default;
+}
+
+.disponible {
+  background: #27ae60;
+  color: white;
+  border: none;
+}
+
+.no-disponible {
+  background: #e74c3c;
+  color: white;
+  border: none;
+}
 
 @media (max-width: 900px) {
-    .header {
-        flex-direction: column;
-        height: auto;
-        padding: 20px;
-        gap: 20px;
-    }
+  .propiedades-grid { grid-template-columns: repeat(2, 1fr); }
+}
 
-    .nav {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .overlay h1 {
-        font-size: 30px;
-    }
-
-    .card {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .footer {
-        flex-direction: column;
-    }
+@media (max-width: 500px) {
+  .propiedades-grid { grid-template-columns: 1fr; }
 }
