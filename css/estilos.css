@@ -223,7 +223,9 @@ img {
     width: 90px;
 
 }
+
 /* comienza contenido */
+
 .servicios-container {
     display: flex;
     flex-wrap: wrap;
@@ -598,7 +600,7 @@ img {
     display: block;
     border-radius: 8px;
 }
-
+/* PIE */
 .footer {
     background: #2a5298;
     width: 100%;
