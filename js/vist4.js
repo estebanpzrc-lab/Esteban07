@@ -23,3 +23,13 @@ boton.addEventListener('click', function(evento) {
         campoNombre.value = "";
     }
 });
+
+
+
+
+
+
+
+
+
+
