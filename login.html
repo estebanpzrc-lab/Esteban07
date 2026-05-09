@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    <!-- Enlace a tus estilos -->
+      <link rel="stylesheet" href="/css/estilos.css">
+    <link rel="stylesheet" href="css/login.css">
+    
+</head>
+    <header class="navbar">
+        <div class="logo-container">
+            <img src="img/logo.png" alt="Logo" class="logo">
+            <nav> <!-- Desde aqui empieza el menu de navegacion -->
+                <ul class="nav-links"> <!-- Aquie empiezan las listas de navegacion que aparece en el menu-->
+                    <li>
+                        <a href="index.html">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="propiedades.html">Propiedades</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Vender <span class="arrow">⌵</span></a>
+
+                        <ul class="submenu">
+                            <li><a href="#">Comprar</a></li>
+                            <li><a href="#">Alquilar</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="pagina2.html" class="active">Quiénes somos</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="login.html" class="active">Iniciar Sesión</a></li>
+                </ul>
+            </nav>
+        </div>
+        <a href="vista4.html">
+            <button class="btn-contacto">Contacto</button>
+        </a>
+    </header>
+
+<body>
+
+    <div class="login-wrapper">
+        <form id="loginForm" class="login-form">
+            <h2>Iniciar Sesión</h2>
+            
+            <div class="input-group">
+                <label for="userEmail">Correo electrónico:</label>
+                <input type="email" id="userEmail" placeholder="ejemplo@correo.com" required>
+            </div>
+            
+            <div class="input-group">
+                <label for="userPass">Contraseña:</label>
+                <input type="password" id="userPass" placeholder="Tu contraseña" required>
+            </div>
+            
+            <button type="submit" class="btn-ingresar">Ingresar</button>
+        </form>
+    </div>
+
+    <!-- Enlace a tu lógica de JavaScript -->
+    <script src="js/login.js"></script>
+</body>
+</html>

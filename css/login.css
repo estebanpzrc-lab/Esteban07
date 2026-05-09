@@ -1,0 +1,88 @@
+/* Reseteo básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Contenedor principal para centrar todo */
+.login-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+/* Diseño de la tarjeta del formulario */
+.login-form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #302896;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #26a92bc0;
+    font-size: 14px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* Estilo del botón */
+.btn-ingresar {
+    width: 100%;
+    padding: 12px;
+    background-color: #4bd42c; /* Tono oscuro, adaptable a tu marca */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.btn-ingresar:hover {
+    background-color: #010f7c;
+
+}
+.registro-link {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #666;
+}
+
+.registro-link a {
+    color: #1505c7; /* Mismo color de tu botón */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.registro-link a:hover {
+    text-decoration: underline;
+}
