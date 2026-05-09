@@ -83,59 +83,71 @@
     border-radius: 0 15px 15px 0;
     padding: 10px; 
    width: 19%;
+   translate: 0 30px;
 
 }
-.servicios {
+
+/* Contenedor general */
+.ventajas {
     display: flex;
-    /* / Activa el modo "Flexbox": pone los hijos uno al lado del otro / */
-    justify-content: center;
-    /* / Centra las cajas en el medio de la pantalla / */
-    gap: 20px;
-    /* / Crea una separación de 20px entre cada caja verde / */
-    padding: 50px;
-    /* / Separa esta sección de la de arriba y abajo / */
-    flex-wrap: wrap;
-    /* / Si el usuario abre la web en un celular, las cajas se bajan una tras otra / */
+    flex-direction: column;
+    align-items: center;
+    gap: 40px; /* Espacio entre cada fila */
+    padding: 50px 20px;
 }
 
-
-.servicios div {
-    background-color: #5db04d;
-    /* / El color verde que vimos en tu imagen / */
-    color: white;
-    /* / Letra blanca / */
-    padding: 20px;
-    /* / Espacio interno para que el texto respire / */
-    width: 250px;
-    /* / Define un ancho fijo para que todas las tarjetas sean iguales / */
-    border-radius: 8px;
-    /* / Redondea las esquinas para que se vea moderno / */
-    text-align: center;
-    /* / Centra el título y el párrafo dentro de la tarjeta / */
+/* Contenedor de cada fila */
+.contenedor-item {
+    position: relative; /* Ancla para el círculo */
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 850px;
 }
 
+/* El bloque gris (tus antiguos <article>) */
 .ventajas article {
-    background-color: #333;
-    /* / Fondo gris oscuro / */
-    color: rgb(255, 0, 0);
-    /* / Letra blanca / */
-    margin: 15px auto;
-    /* / Separa cada ventaja una de otra y las centra / */
-    padding: 20px;
-    /* / Espacio interno / */
-    max-width: 600px;
-    /* / Limita el largo de la barra gris / */
-    border-radius: 0 50px 50px 0;
-    /* / Redondea solo las esquinas de la derecha / */
+    background-color: #3e3e3e; /* Gris oscuro */
+    color: white;
+    padding: 25px 40px 25px 120px; /* El padding izquierdo de 120px evita que el círculo tape el texto */
+    border-radius: 70PX 25px 25px 70px; /* Forma de la caja según tu imagen */
+    width: 100%;
 }
 
+/* El círculo verde a la izquierda */
+.circulo-verde {
+    position: absolute;
+    left: -15px; /* Hace que sobresalga a la izquierda */
+    width: 130px;
+    height: 130px;
+    background-color: #519643; /* Tu color verde */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2; /* Lo pone por encima de la caja gris */
+    border: 4px solid white; /* Borde blanco para separar visualmente */
+}
 
+.circulo-verde img {
+    width: 70%;
+    height: auto;
+}
+
+/* Estilo de los textos internos */
 .ventajas h4 {
-    color: #5db04d;
-    /* / Pone los números (+24, +300) en color verde / */
-    font-size: 1.5rem;
-    /* / Hace que el número se vea más grande que el texto / */
+    margin: 0 0 10px 0;
+    font-size: 22px;
 }
+
+.ventajas p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+
+
 
 .testimonios {
     display: flex;
@@ -160,55 +172,8 @@ blockquote {
     /* Centra la caja y da espacio arriba para que sobresalga la etiqueta */
 }
 
-.servicios {
-    display: flex;
-    /* / Activa el modo "Flexbox": pone los hijos uno al lado del otro / */
-    justify-content: center;
-    /* / Centra las cajas en el medio de la pantalla / */
-    gap: 20px;
-    /* / Crea una separación de 20px entre cada caja verde / */
-    padding: 50px;
-    /* / Separa esta sección de la de arriba y abajo / */
-    flex-wrap: wrap;
-    /* / Si el usuario abre la web en un celular, las cajas se bajan una tras otra / */
-}
 
-.servicios div {
-    background-color: var(--verde);
-    /* / El color verde que vimos en tu imagen / */
-    color: white;
-    /* / Letra blanca / */
-    padding: 20px;
-    /* / Espacio interno para que el texto respire / */
-    width: 250px;
-    /* / Define un ancho fijo para que todas las tarjetas sean iguales / */
-    border-radius: 8px;
-    /* / Redondea las esquinas para que se vea moderno / */
-    text-align: center;
-    /* / Centra el título y el párrafo dentro de la tarjeta / */
-}
 
-.ventajas article {
-    background-color: #333;
-    /* / Fondo gris oscuro / */
-    color: white;
-    /* / Letra blanca / */
-    margin: 80px auto;
-    /* / Separa cada ventaja una de otra y las centra / */
-    padding: 20px;
-    /* / Espacio interno / */
-    max-width: 600px;
-    /* / Limita el largo de la barra gris / */
-    border-radius: 0 20px 20px 0;
-    /* / Redondea solo las esquinas de la derecha / */
-}
-
-.ventajas h4 {
-    color: #5db04d;
-    /* / Pone los números (+24, +300) en color verde / */
-    font-size: 1.5rem;
-    /* / Hace que el número se vea más grande que el texto / */
-}
 
 .testimonios {
     display: flex;
@@ -231,4 +196,69 @@ blockquote {
     height: 450;
     overflow: hidden;
     /* evita que la imagen se salga */
+}
+
+
+/* 1. Contenedor principal: damos espacio arriba para que el círculo no se corte */
+.servicios {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 100px; /* Aumentamos este espacio */
+    flex-wrap: wrap;
+    background-color: white; /* O el color de tu fondo */
+}
+
+/* 2. La tarjeta: ahora con posición relativa para anclar el círculo */
+.servicios > div {
+    background-color: #519643; /* Tu verde */
+    color: white;
+    padding: 80px 20px 30px; /* Más padding arriba para no chocar con el círculo */
+    border-radius: 15px;
+    width: 300px;
+    text-align: center;
+    position: relative; /* ¡Importante! */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 3. El contenedor del círculo (debes envolver tu <img> en un div con esta clase) */
+.circulo-icono {
+    position: absolute;
+    top: -60px; /* Lo subimos para que flote sobre el borde */
+    left: 50%;
+    transform: translateX(-50%);
+    
+    width: 120px;  /* Tamaño del círculo */
+    height: 120px;
+    background-color: #519643;
+    border-radius: 50%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* Borde grueso del color del fondo de la página para el efecto de "recorte" */
+    border: 4px solid white; 
+    box-sizing: border-box;
+}
+
+/* 4. Ajuste de la imagen dentro del círculo */
+.circulo-icono img {
+    width: 70%;
+    height: auto;
+    display: block;
+}
+
+/* 5. Ajuste de textos para que no se peguen */
+.servicios h3 {
+    margin: 0 0 15px 0;
+    font-size: 24px;
+}
+
+.servicios p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.6;
 }
