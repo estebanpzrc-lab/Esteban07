@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/carrito.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo-container">
+            <img src="img/logo.png" class="logo">
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="propiedades.html">Propiedades</a></li>
+                    <li><a href="decoraciones.html" class="active">Decoraciones</a></li>
+                    <li class="dropdown">
+                        <a href="#">Vender <span class="arrow">⌵</span></a>
+                        <ul class="submenu">
+                            <li><a href="#">Comprar</a></li>
+                            <li><a href="#">Alquilar</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="pagina2.html">Quiénes somos</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="login.html" class="active">Iniciar Sesión</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="checkout-container">
+
+        <!-- COLUMNA IZQUIERDA: PRODUCTOS -->
+        <section class="checkout-items">
+            <h2>Carrito de Compras</h2>
+            <div id="carritoItems"></div>
+        </section>
+
+        <!-- COLUMNA DERECHA: FORMULARIO + RESUMEN -->
+        <aside class="checkout-sidebar">
+
+            <h3>Datos del comprador</h3>
+
+            <div class="form-group">
+                <label>Nombre completo</label>
+                <input type="text" id="nombre" placeholder="Ej: Juan Pérez">
+            </div>
+
+            <div class="form-group">
+                <label>Dirección</label>
+                <input type="text" id="direccion" placeholder="Ej: Av. Los Olivos 123">
+            </div>
+
+            <div class="form-group">
+                <label>Teléfono</label>
+                <input type="text" id="telefono" placeholder="Ej: 987654321">
+            </div>
+
+            <h3>Método de pago</h3>
+
+            <div class="form-group">
+                <select id="metodoPago">
+                    <option value="tarjeta">Tarjeta de crédito / débito</option>
+                    <option value="yape">Yape</option>
+                    <option value="plin">Plin</option>
+                </select>
+            </div>
+
+            <!-- FORM TARJETA -->
+            <div id="formTarjeta" class="tarjeta-form">
+                <label>Número de tarjeta</label>
+                <input type="text" id="numTarjeta" placeholder="1111 2222 3333 4444">
+
+                <label>Fecha de expiración</label>
+                <input type="text" id="exp" placeholder="MM/AA">
+
+                <label>CVV</label>
+                <input type="text" id="cvv" placeholder="123">
+            </div>
+
+            <!-- FORM YAPE/PLIN -->
+            <div id="formYape" class="yape-form hidden">
+                <label>Número de celular</label>
+                <input type="text" id="numYape" placeholder="Ej: 987654321">
+            </div>
+
+            <h3>Resumen</h3>
+
+            <div class="resumen-linea">
+                <span>Subtotal:</span>
+                <span>S/ <span id="subtotal">0</span></span>
+            </div>
+
+            <div class="resumen-linea">
+                <span>Envío:</span>
+                <span>S/ <span id="envio">0</span></span>
+            </div>
+
+            <div class="resumen-total">
+                <span>Total:</span>
+                <span>S/ <span id="total">0</span></span>
+            </div>
+
+            <button id="btnPagar" class="btn-pagar">Finalizar compra</button>
+
+        </aside>
+
+    </main>
+
+    <script src="js/checkout.js"></script>
+
+
+</body>
+
+</html>

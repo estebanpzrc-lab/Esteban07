@@ -1,172 +1,171 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/estilos.css">
-    <title>Propiedades</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/estilos.css">
+  <title>Propiedades</title>
 </head>
+
 <body>
-    <script src="js/propiedades.js"></script>
-    <header class="navbar">
-        <div class="logo-container">
-            <img src="img/logo.png" alt="Logo" class="logo">
-            <nav> <!-- Desde aqui empieza el menu de navegacion -->
-                <ul class="nav-links"> <!-- Aquie empiezan las listas de navegacion que aparece en el menu-->
-                    <li>
-                        <a href="index.html">Inicio</a>
-                    </li>
-                    <li>
-                        <a href="propiedades.html">Propiedades</a>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#">Vender <span class="arrow">⌵</span></a>
+  <script src="js/propiedades.js"></script>
+  <header class="navbar">
+    <div class="logo-container">
+      <img src="img/logo.png" alt="Logo" class="logo">
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="propiedades.html">Propiedades</a></li>
+          <li><a href="decoraciones.html" class="active">Decoraciones</a></li>
+          <li class="dropdown">
+            <a href="#">Vender <span class="arrow">⌵</span></a>
+            <ul class="submenu">
+              <li><a href="#">Comprar</a></li>
+              <li><a href="#">Alquilar</a></li>
+            </ul>
+          </li>
+          <li><a href="pagina2.html">Quiénes somos</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="login.html" class="active">Iniciar Sesión</a></li>
+        </ul>
+      </nav>
+    </div>
+    <a href="vista4.html">
+      <button class="btn-contacto">Contacto</button>
+    </a>
+  </header>
 
-                        <ul class="submenu">
-                            <li><a href="#">Comprar</a></li>
-                            <li><a href="#">Alquilar</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="pagina2.html" class="active">Quiénes somos</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="login.html" class="active">Iniciar Sesión</a></li>
-                </ul>
-            </nav>
-        </div>
-        <a href="vista4.html">
-            <button class="btn-contacto">Contacto</button>
-        </a>
-    </header>
-
-    <!-- SECCIÓN PROPIEDADES -->
-<section class="propiedades-seccion">
-  <h1>Propiedades</h1>
+  <!-- SECCIÓN PROPIEDADES -->
+  <section class="propiedades-seccion">
+    <h1>Propiedades</h1>
     <!---FILTROS-->
-   <div class="filtros">
-    <button class="filtro-btn activo" onclick="filtrar('todos')">Todos</button>
-    <button class="filtro-btn" onclick="filtrar('disponible')">Disponibles</button>
-    <button class="filtro-btn" onclick="filtrar('no-disponible')">No disponibles</button>
-  </div>
-  <div class="propiedades-grid" id="propiedades-grid"> 
-    <!-- Aquí se agregarán las tarjetas de propiedades dinámicamente -->
+    <div class="filtros">
+      <button class="filtro-btn activo" onclick="filtrar('todos')">Todos</button>
+      <button class="filtro-btn" onclick="filtrar('disponible')">Disponibles</button>
+      <button class="filtro-btn" onclick="filtrar('no-disponible')">No disponibles</button>
+    </div>
+    <div class="propiedades-grid" id="propiedades-grid">
+      <!-- Aquí se agregarán las tarjetas de propiedades dinámicamente -->
 
-    <!-- CARD 1 -->
-    <div class="prop-card">
-      <img src="img/propiedades/propiedad 1.jpg" alt="Casa en Condominio">
-      <div class="prop-info">
-        <h3>Casa Condominio - San Juan de lurigancho</h3>
-        <p class="prop-ubicacion">Casa residencial</p>
-        <p class="prop-precio">S/ 22.050.000</p>
-        <p class="prop-detalles">2 cuartos · 2 suítes · 3 garages</p>
-        <div class="prop-botones">
+      <!-- CARD 1 -->
+      <div class="prop-card">
+        <img src="img/propiedades/propiedad 1.jpg" alt="Casa en Condominio">
+        <div class="prop-info">
+          <h3>Casa Condominio - San Juan de lurigancho</h3>
+          <p class="prop-ubicacion">Casa residencial</p>
+          <p class="prop-precio">S/ 22.050.000</p>
+          <p class="prop-detalles">2 cuartos · 2 suítes · 3 garages</p>
+          <div class="prop-botones">
             <a href="#" class="prop-btn">Ver mas</a>
             <span class="prop-disponible no-disponible">Vendido</span>
+          </div>
         </div>
       </div>
-    </div>
-        <!-- CARD 2 -->
-    <div class="prop-card">
-      <img src="img/propiedades/propiedad 2.jpg" alt="Casa en Condominio">
-      <div class="prop-info">
-        <h3>Casa Condominio - Barranco</h3>
-        <p class="prop-ubicacion">Casa residencial</p>
-        <p class="prop-precio">S/ 25.850.000</p>
-        <p class="prop-detalles">2 cuartos · 2 suítes · 3 garages</p>
-        <div class="prop-botones">
+      <!-- CARD 2 -->
+      <div class="prop-card">
+        <img src="img/propiedades/propiedad 2.jpg" alt="Casa en Condominio">
+        <div class="prop-info">
+          <h3>Casa Condominio - Barranco</h3>
+          <p class="prop-ubicacion">Casa residencial</p>
+          <p class="prop-precio">S/ 25.850.000</p>
+          <p class="prop-detalles">2 cuartos · 2 suítes · 3 garages</p>
+          <div class="prop-botones">
             <a href="#" class="prop-btn">Ver mas</a>
             <span class="prop-disponible no-disponible">Vendido</span>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- CARD 3 -->
-    <div class="prop-card">
-      <img src="img/propiedades/propiedad 3.jpg" alt="Casa en Condominio">
-      <div class="prop-info">
-        <h3>Casa Condominio - Miraflores</h3>
-        <p class="prop-ubicacion">Casa residencial</p>
-        <p class="prop-precio">S/ 30.800.000</p>
-        <p class="prop-detalles">2 cuartos · 2 suítes · 3 garages</p>
-        <div class="prop-botones">
+      <!-- CARD 3 -->
+      <div class="prop-card">
+        <img src="img/propiedades/propiedad 3.jpg" alt="Casa en Condominio">
+        <div class="prop-info">
+          <h3>Casa Condominio - Miraflores</h3>
+          <p class="prop-ubicacion">Casa residencial</p>
+          <p class="prop-precio">S/ 30.800.000</p>
+          <p class="prop-detalles">2 cuartos · 2 suítes · 3 garages</p>
+          <div class="prop-botones">
             <a href="#" class="prop-btn">Ver mas</a>
             <span class="prop-disponible no-disponible">Vendido</span>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- CARD 4 -->
-    <div class="prop-card">
-      <img src="img/propiedades/propiedad 4.jpg" alt="Casa en Condominio">
-      <div class="prop-info">
-        <h3>Casa Condominio - Lince</h3>
-        <p class="prop-ubicacion">Casa residencial</p>
-        <p class="prop-precio">S/ 35.250.000</p>
-        <p class="prop-detalles">2 cuartos · 2 suítes · 3 garages</p>
-        <div class="prop-botones">
+      <!-- CARD 4 -->
+      <div class="prop-card">
+        <img src="img/propiedades/propiedad 4.jpg" alt="Casa en Condominio">
+        <div class="prop-info">
+          <h3>Casa Condominio - Lince</h3>
+          <p class="prop-ubicacion">Casa residencial</p>
+          <p class="prop-precio">S/ 35.250.000</p>
+          <p class="prop-detalles">2 cuartos · 2 suítes · 3 garages</p>
+          <div class="prop-botones">
             <a href="#" class="prop-btn">Ver mas</a>
             <span class="prop-disponible disponible">Disponible</span>
+          </div>
         </div>
       </div>
-    </div>
-<!-- CARD 5 -->
-    <div class="prop-card">
-      <img src="img/propiedades/propiedad 5.jpg" alt="Casa en Condominio">
-      <div class="prop-info">
-        <h3>Casa Lujosa - Presidente Prudente</h3>
-        <p class="prop-ubicacion">Parque Residencial Dahma III · Presidente Prudente</p>
-        <p class="prop-precio">S/ 37.250.000</p>
-        <p class="prop-detalles">2 banheiros · 2 suítes · 3 garagens</p>
-        <div class="prop-botones">
+      <!-- CARD 5 -->
+      <div class="prop-card">
+        <img src="img/propiedades/propiedad 5.jpg" alt="Casa en Condominio">
+        <div class="prop-info">
+          <h3>Casa Lujosa - Presidente Prudente</h3>
+          <p class="prop-ubicacion">Parque Residencial Dahma III · Presidente Prudente</p>
+          <p class="prop-precio">S/ 37.250.000</p>
+          <p class="prop-detalles">2 banheiros · 2 suítes · 3 garagens</p>
+          <div class="prop-botones">
             <a href="#" class="prop-btn">Ver Mais</a>
             <span class="prop-disponible disponible">Disponible</span>
+          </div>
         </div>
       </div>
-    </div>
-    <!-- CARD 6 -->
-    <div class="prop-card">
-      <img src="img/propiedades/propiedad 6.jpg" alt="Casa en Condominio">
-      <div class="prop-info">
-        <h3>Casa en Condomínio - La Planicie</h3>
-        <p class="prop-ubicacion">Parque Residencial Dahma III · Presidente Prudente</p>
-        <p class="prop-precio">S/ 40.250.000</p>
-        <p class="prop-detalles">2 banheiros · 2 suítes · 3 garagens</p>
-        <div class="prop-botones">
+      <!-- CARD 6 -->
+      <div class="prop-card">
+        <img src="img/propiedades/propiedad 6.jpg" alt="Casa en Condominio">
+        <div class="prop-info">
+          <h3>Casa en Condomínio - La Planicie</h3>
+          <p class="prop-ubicacion">Parque Residencial Dahma III · Presidente Prudente</p>
+          <p class="prop-precio">S/ 40.250.000</p>
+          <p class="prop-detalles">2 banheiros · 2 suítes · 3 garagens</p>
+          <div class="prop-botones">
             <a href="#" class="prop-btn">Ver Mais</a>
             <span class="prop-disponible disponible">Disponible</span>
+          </div>
         </div>
       </div>
-    </div>
-    <!-- CARD 7 -->
-    <div class="prop-card">
-      <img src="img/propiedades/propiedad 7.jpg" alt="Casa en Condominio">
-      <div class="prop-info">
-        <h3>Casa en Condomínio - Lima Centro</h3>
-        <p class="prop-ubicacion">Parque Residencial Dahma III · Presidente Prudente</p>
-        <p class="prop-precio">S/ 45.250.000</p>
-        <p class="prop-detalles">2 banheiros · 2 suítes · 3 garagens</p>
-        <div class="prop-botones">
+      <!-- CARD 7 -->
+      <div class="prop-card">
+        <img src="img/propiedades/propiedad 7.jpg" alt="Casa en Condominio">
+        <div class="prop-info">
+          <h3>Casa en Condomínio - Lima Centro</h3>
+          <p class="prop-ubicacion">Parque Residencial Dahma III · Presidente Prudente</p>
+          <p class="prop-precio">S/ 45.250.000</p>
+          <p class="prop-detalles">2 banheiros · 2 suítes · 3 garagens</p>
+          <div class="prop-botones">
             <a href="#" class="prop-btn">Ver Mais</a>
             <span class="prop-disponible disponible">Disponible</span>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- CARD 8 -->
-    <div class="prop-card">
-      <img src="img/propiedades/propiedad 8.jpg" alt="Casa en Condominio">
-      <div class="prop-info">
-        <h3>Casa en Tacna - Ciudad Nueva</h3>
-        <p class="prop-ubicacion">zona no hay choros :v</p>
-        <p class="prop-precio">S/ 47.250.000</p>
-        <p class="prop-detalles">2 cuartos · 2 plantas · 3 garages</p>
-        <div class="prop-botones">
+      <!-- CARD 8 -->
+      <div class="prop-card">
+        <img src="img/propiedades/propiedad 8.jpg" alt="Casa en Condominio">
+        <div class="prop-info">
+          <h3>Casa en Tacna - Ciudad Nueva</h3>
+          <p class="prop-ubicacion">zona no hay choros :v</p>
+          <p class="prop-precio">S/ 47.250.000</p>
+          <p class="prop-detalles">2 cuartos · 2 plantas · 3 garages</p>
+          <div class="prop-botones">
             <a href="#" class="prop-btn">Ver Mas</a>
             <span class="prop-disponible disponible">Disponible</span>
+          </div>
         </div>
       </div>
     </div>
-</div>
-</section>
+  </section>
 
 </body>
+
 </html>
