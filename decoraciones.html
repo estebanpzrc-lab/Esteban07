@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/art2.css">
-    <title>Tendencias Decorativas 2026</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/contadorcarrito.css">
+    <title>Decoraciones</title>
 </head>
 
 <body>
@@ -30,88 +31,114 @@
                     <li><a href="login.html" class="active">Iniciar Sesión</a></li>
                 </ul>
             </nav>
+
+            <a href="carrito.html" class="carrito-icono">
+                🛒 <span id="contadorCarrito">0</span>
+            </a>
         </div>
+
         <a href="vista4.html">
             <button class="btn-contacto">Contacto</button>
         </a>
     </header>
-    <main>
 
-        <section class="hero">
-            <div class="overlay">
-                <h1>Tendencias decorativas 2026</h1>
+    <section class="propiedades-seccion">
+        <h1>Decoraciones para tu Hogar</h1>
+
+        <div class="propiedades-grid">
+
+            <!-- PRODUCTO 1 -->
+            <div class="prop-card">
+                <img src="img/Cuadro decorativo.jpg" alt="Cuadro Decorativo Moderno">
+                <div class="prop-info">
+                    <h3>Cuadro Decorativo Moderno</h3>
+                    <p class="prop-precio">S/ 120</p>
+                    <button
+                        onclick="agregarAlCarrito('Cuadro Decorativo Moderno',120,'img/Cuadro decorativo.jpg')">Agregar
+                        al carrito</button>
+                </div>
             </div>
-        </section>
 
-        <section class="intro">
-            <p>
-                En la decoración de hogares se esta expirimentando una evolución constante, y el año 2026 no es la
-                excepción. Las tendencias decorativas para este año se centran en la sostenibilidad, la comodidad y la
-                conexión con la naturaleza. A continuación, te presentamos algunas de las tendencias más destacadas que
-                están marcando el estilo de decoración en 2026.
-            </p>
-        </section>
-
-        <section class="articles">
-
-            <article class="card left">
-                <div class="image">
-                    <img src="IMG/decoracion1.jpg" alt="Materiales ecológicos">
+            <!-- PRODUCTO 2 -->
+            <div class="prop-card">
+                <img src="img/florero.jpg" alt="Florero Minimalista">
+                <div class="prop-info">
+                    <h3>Florero Minimalista</h3>
+                    <p class="prop-precio">S/ 80</p>
+                    <button onclick="agregarAlCarrito('Florero Minimalista',80,'img/florero.jpg')">Agregar al
+                        carrito</button>
                 </div>
+            </div>
 
-                <div class="text">
-                    <h2>Materiales ecológicos</h2>
-                    <p>
-                        <!-- Aquí va el contenido del artículo -->
-                        Los materiales ecológicos están ganando popularidad en la decoración de hogares. Estos
-                        materiales son sostenibles y respetuosos con el medio ambiente, lo que los hace ideales para
-                        crear espacios atractivos y responsables.
-                    </p>
+            <!-- PRODUCTO 3 -->
+            <div class="prop-card">
+                <img src="img/LamparaLed.jpg" alt="Lámpara LED de Mesa">
+                <div class="prop-info">
+                    <h3>Lámpara LED de Mesa</h3>
+                    <p class="prop-precio">S/ 150</p>
+                    <button onclick="agregarAlCarrito('Lámpara LED de Mesa',150,'img/LamparaLed.jpg')">Agregar al
+                        carrito</button>
                 </div>
-            </article>
+            </div>
 
-            <article class="card right">
-                <div class="text">
-                    <h2>Texturas suaves</h2>
-                    <p>
-                        <!-- Aquí va el contenido del artículo -->
-                        Las texturas suaves están en auge en 2026, ya que ofrecen un confort visual y táctil que
-                        complementa perfectamente con los diseños modernos.
-                    </p>
+            <!-- PRODUCTO 4 -->
+            <div class="prop-card">
+                <img src="img/Alfombra.jpg" alt="Alfombra Boho">
+                <div class="prop-info">
+                    <h3>Alfombra Boho</h3>
+                    <p class="prop-precio">S/ 95</p>
+                    <button onclick="agregarAlCarrito('Alfombra Boho',95,'img/Alfombra.jpg')">Agregar al
+                        carrito</button>
                 </div>
+            </div>
 
-                <div class="image">
-                    <img src="IMG/decoracion2.jpg" alt="Texturas suaves">
+            <!-- PRODUCTO 5 -->
+            <div class="prop-card">
+                <img src="img/plantaartificial.jpg" alt="Planta Artificial Premium">
+                <div class="prop-info">
+                    <h3>Planta Artificial Premium</h3>
+                    <p class="prop-precio">S/ 70</p>
+                    <button
+                        onclick="agregarAlCarrito('Planta Artificial Premium',70,'img/plantaartificial.jpg')">Agregar al
+                        carrito</button>
                 </div>
-            </article>
+            </div>
 
-            <article class="card left">
-                <div class="image">
-                    <img src="IMG/decoracion3.jpg" alt="Colores cálidos">
+            <!-- PRODUCTO 6 -->
+            <div class="prop-card">
+                <img src="img/espejo.jpg" alt="Espejo Circular Minimalista">
+                <div class="prop-info">
+                    <h3>Espejo Circular Minimalista</h3>
+                    <p class="prop-precio">S/ 180</p>
+                    <button onclick="agregarAlCarrito('Espejo Circular Minimalista',180,'img/espejo.jpg')">Agregar al
+                        carrito</button>
                 </div>
+            </div>
 
-                <div class="text">
-                    <h2>Colores cálidos</h2>
-                    <p>
-                        <!-- Aquí va el contenido del artículo -->
-                        Los colores cálidos están en auge en 2026, ya que crean un ambiente acogedor y relajante que
-                        invita a la convivencia y el descanso.
-                    </p>
+            <!-- PRODUCTO 7 -->
+            <div class="prop-card">
+                <img src="img/reloj.jpg" alt="Reloj de Pared Vintage">
+                <div class="prop-info">
+                    <h3>Reloj de Pared Vintage</h3>
+                    <p class="prop-precio">S/ 110</p>
+                    <button onclick="agregarAlCarrito('Reloj de Pared Vintage',110,'img/reloj.jpg')">Agregar al
+                        carrito</button>
                 </div>
-            </article>
+            </div>
 
-        </section>
+            <!-- PRODUCTO 8 -->
+            <div class="prop-card">
+                <img src="img/velas.jpg" alt="Set de Velas Aromáticas">
+                <div class="prop-info">
+                    <h3>Set de Velas Aromáticas</h3>
+                    <p class="prop-precio">S/ 45</p>
+                    <button onclick="agregarAlCarrito('Set de Velas Aromáticas',45,'img/velas.jpg')">Agregar al
+                        carrito</button>
+                </div>
+            </div>
 
-        <section class="closing">
-            <p>
-                <!-- Aquí va el párrafo final -->
-                Estas tendencias decorativas reflejan la evolución constante del diseño de interiores, adaptándose a las
-                necesidades y preferencias de los usuarios en el año 2026.
-            </p>
-        </section>
-
-    </main>
-
+        </div>
+    </section>
     <footer class="footer">
         <div class="footer-inner">
 
@@ -179,6 +206,8 @@
             <p>Copyright © 2026 Todos los derechos reservados</p>
         </div>
     </footer>
+    <script src="js/decoraciones.js"></script>
+
 
 </body>
 
