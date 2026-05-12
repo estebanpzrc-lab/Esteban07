@@ -22,3 +22,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
         alert("Por favor, completa todos los campos.");
     }
 });
+for (let index = 0; index < array.length; index++) {
+    const element = array[index];
+    
+}

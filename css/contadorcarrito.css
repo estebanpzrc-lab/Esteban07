@@ -1,3 +1,8 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 .carrito-icono {
     position: relative;
     cursor: pointer;
@@ -6,6 +11,8 @@
     color: white;
     display: inline-flex;
     align-items: center;
+  transform: translate(-430px);
+  
 }
 
 /* BURBUJA DEL CONTADOR */
