@@ -2,26 +2,24 @@
 // CARRITO PARA DECORACIONES
 // ===============================
 
-// Si no existe carrito en localStorage, lo crea
-let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-
 // Función para agregar decoraciones al carrito
 function agregarAlCarrito(nombre, precio, imagen) {
 
-    const producto = {
-        nombre: nombre,
-        precio: precio,
-        imagen: imagen,
-        cantidad: 1
-    };
+    // Cargar SIEMPRE el carrito actualizado
+    let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
-    // Verificar si ya existe en el carrito
+    // Buscar si ya existe
     const existente = carrito.find(item => item.nombre === nombre);
 
     if (existente) {
         existente.cantidad++;
     } else {
-        carrito.push(producto);
+        carrito.push({
+            nombre: nombre,
+            precio: precio,
+            imagen: imagen,
+            cantidad: 1
+        });
     }
 
     // Guardar en localStorage
@@ -35,9 +33,9 @@ function agregarAlCarrito(nombre, precio, imagen) {
 
 // Actualiza el número del carrito en el header
 function actualizarContadorCarrito() {
-    const contador = document.getElementById("contadorCarrito");
+    const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
     const total = carrito.reduce((acc, item) => acc + item.cantidad, 0);
-    contador.textContent = total;
+    document.getElementById("contadorCarrito").textContent = total;
 }
 
 // Ejecutar contador al cargar la página

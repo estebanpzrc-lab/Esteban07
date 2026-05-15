@@ -1,3 +1,7 @@
+/* ===============================
+   CONTENEDOR PRINCIPAL
+   =============================== */
+
 .checkout-container {
     display: flex;
     gap: 25px;
@@ -5,20 +9,25 @@
     background: #f4f4f4;
 }
 
-.checkout-items {
-    flex: 3;
+.checkout-items,
+.checkout-sidebar {
     background: white;
     padding: 20px;
     border-radius: 10px;
 }
 
+.checkout-items {
+    flex: 3;
+}
+
 .checkout-sidebar {
     flex: 1.2;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
     height: fit-content;
 }
+
+/* ===============================
+   PRODUCTOS DEL CARRITO
+   =============================== */
 
 .carrito-item {
     display: flex;
@@ -27,27 +36,81 @@
     padding: 15px;
     border-radius: 10px;
     margin-bottom: 15px;
+    border: 1px solid #e5e5e5;
 }
 
 .carrito-item img {
-    width: 120px;
-    height: 90px;
+    width: 110px;
+    height: 85px;
     object-fit: cover;
     border-radius: 8px;
 }
 
 .carrito-info {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
 }
 
-.btn-eliminar {
-    background: #e53935;
-    color: white;
+/* ===============================
+   CONTROLES DE CANTIDAD
+   =============================== */
+
+.cantidad-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 6px 0;
+}
+
+.btn-cantidad {
+    width: 28px;
+    height: 28px;
     border: none;
-    padding: 8px 12px;
+    background-color: #007bff;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
     border-radius: 6px;
     cursor: pointer;
+    transition: 0.2s ease;
 }
+
+.btn-cantidad:hover {
+    background-color: #0056b3;
+}
+
+.cantidad-controls span {
+    font-size: 16px;
+    font-weight: bold;
+    min-width: 22px;
+    text-align: center;
+}
+
+/* ===============================
+   BOTÓN ELIMINAR TODO
+   =============================== */
+
+.btn-eliminar {
+    background-color: #ff4d4d;
+    border: none;
+    padding: 8px 12px;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s ease;
+    font-size: 14px;
+    margin-top: 6px;
+}
+
+.btn-eliminar:hover {
+    background-color: #cc0000;
+}
+
+/* ===============================
+   FORMULARIO Y RESUMEN
+   =============================== */
 
 .form-group {
     margin-bottom: 15px;
@@ -61,15 +124,13 @@
     border: 1px solid #ccc;
 }
 
-.resumen-linea {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-}
-
+.resumen-linea,
 .resumen-total {
     display: flex;
     justify-content: space-between;
+}
+
+.resumen-total {
     font-size: 20px;
     margin-top: 20px;
     font-weight: bold;
@@ -87,13 +148,39 @@
     font-size: 16px;
 }
 
+.btn-pagar:hover {
+    background: #e68a00;
+}
+
 .hidden {
     display: none;
 }
 
+/* ===============================
+   RESPONSIVE
+   =============================== */
 
+@media (max-width: 768px) {
+    .checkout-container {
+        flex-direction: column;
+        padding: 15px;
+    }
 
+    .carrito-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
+    .carrito-item img {
+        width: 100%;
+        height: auto;
+    }
+
+    .btn-eliminar {
+        width: 100%;
+        text-align: center;
+    }
+}
 
 
 

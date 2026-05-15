@@ -9,34 +9,17 @@ let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 function actualizarContador() {
     const contador = document.getElementById("contadorCarrito");
     if (!contador) return;
+
     carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-    contador.textContent = carrito.length;
+    const total = carrito.reduce((acc, item) => acc + (item.cantidad || 1), 0);
+
+    contador.textContent = total;
 }
 
-// Mostrar contador al cargar la página
 actualizarContador();
 
 // ===============================
-//   AGREGAR PRODUCTO AL CARRITO
-// ===============================
-function agregarAlCarrito(nombre, precio, imagen) {
-    carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-
-    carrito.push({
-        nombre: nombre,
-        precio: Number(precio),
-        imagen: imagen
-    });
-
-    localStorage.setItem("carrito", JSON.stringify(carrito));
-
-    actualizarContador();
-
-    alert("Propiedad agregada al carrito");
-}
-
-// ===============================
-//   REFERENCIAS DEL CARRITO (SOLO EN carrito.html)
+//   REFERENCIAS DEL CARRITO
 // ===============================
 const contenedor = document.getElementById("carritoItems");
 const subtotalSpan = document.getElementById("subtotal");
@@ -46,7 +29,7 @@ const totalSpan = document.getElementById("total");
 //   MOSTRAR PRODUCTOS EN EL CARRITO
 // ===============================
 function mostrarCarrito() {
-    if (!contenedor) return; // No estás en carrito.html
+    if (!contenedor) return;
 
     carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
@@ -54,32 +37,69 @@ function mostrarCarrito() {
     let subtotal = 0;
 
     carrito.forEach((item, index) => {
-        subtotal += Number(item.precio);
+
+        if (!item.cantidad) item.cantidad = 1;
+
+        const totalProducto = item.precio * item.cantidad;
+        subtotal += totalProducto;
 
         contenedor.innerHTML += `
             <div class="carrito-item">
                 <img src="${item.imagen}">
                 <div class="carrito-info">
                     <h3>${item.nombre}</h3>
-                    <p>Precio: S/ ${item.precio}</p>
+                    <p>Precio unitario: S/ ${item.precio}</p>
+
+                    <div class="cantidad-controls">
+                        <button onclick="restar(${index})" class="btn-cantidad">-</button>
+                        <span>${item.cantidad}</span>
+                        <button onclick="sumar(${index})" class="btn-cantidad">+</button>
+                    </div>
+
+                    <p>Total: S/ ${totalProducto}</p>
                 </div>
-                <button class="btn-eliminar" onclick="eliminar(${index})">Eliminar</button>
+
+                <button class="btn-eliminar" onclick="eliminar(${index})">Eliminar todo</button>
             </div>
         `;
     });
 
-    if (subtotalSpan && totalSpan) {
-        subtotalSpan.textContent = subtotal;
-        totalSpan.textContent = subtotal;
-    }
+    subtotalSpan.textContent = subtotal;
+    totalSpan.textContent = subtotal;
 }
 
-if (contenedor) {
+if (contenedor) mostrarCarrito();
+
+// ===============================
+//   SUMAR CANTIDAD
+// ===============================
+function sumar(i) {
+    carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+    carrito[i].cantidad++;
+    localStorage.setItem("carrito", JSON.stringify(carrito));
     mostrarCarrito();
+    actualizarContador();
 }
 
 // ===============================
-//   ELIMINAR PRODUCTO
+//   RESTAR CANTIDAD
+// ===============================
+function restar(i) {
+    carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+    if (carrito[i].cantidad > 1) {
+        carrito[i].cantidad--;
+    } else {
+        carrito.splice(i, 1);
+    }
+
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+    mostrarCarrito();
+    actualizarContador();
+}
+
+// ===============================
+//   ELIMINAR TODO EL PRODUCTO
 // ===============================
 function eliminar(i) {
     carrito = JSON.parse(localStorage.getItem("carrito")) || [];
@@ -135,5 +155,3 @@ if (btnPagar) {
         alert(`Compra realizada con éxito usando ${metodo.toUpperCase()} (modo demo)`);
     });
 }
-
-
