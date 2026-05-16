@@ -4,15 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/art1.css">
-    <title>Tips para encontrar casa en Perú</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/contadorcarrito.css">
+    <title>Decoraciones</title>
 </head>
 
 <body>
+
     <header class="navbar">
         <div class="logo-container">
             <img src="img/logo.png" alt="Logo" class="logo">
-      <nav>
+            <nav>
                 <ul class="nav-links">
                     <li><a href="index.html">Inicio</a></li>
                     <li><a href="propiedades.html">Propiedades</a></li>
@@ -33,155 +35,111 @@
                 </ul>
 
             </nav>
+            <a href="carrito.html" class="carrito-icono">
+                🛒 <span id="contadorCarrito">0</span>
+            </a>
         </div>
-    
+
+
     </header>
 
-    <!-- HERO -->
-    <section class="hero">
+    <section class="propiedades-seccion">
+        <h1>Decoraciones para tu Hogar</h1>
 
-        <div class="overlay">
-            <h1>Tips para encontrar casa en Perú</h1>
+        <div class="propiedades-grid">
+
+            <!-- PRODUCTO 1 -->
+            <div class="prop-card">
+                <img src="img/Cuadro decorativo.jpg" alt="Cuadro Decorativo Moderno">
+                <div class="prop-info">
+                    <h3>Cuadro Decorativo Moderno</h3>
+                    <p class="prop-precio">S/ 120</p>
+                    <button
+                        onclick="agregarAlCarrito('Cuadro Decorativo Moderno',120,'img/Cuadro decorativo.jpg')">Agregar
+                        al carrito</button>
+                </div>
+            </div>
+
+            <!-- PRODUCTO 2 -->
+            <div class="prop-card">
+                <img src="img/florero.jpg" alt="Florero Minimalista">
+                <div class="prop-info">
+                    <h3>Florero Minimalista</h3>
+                    <p class="prop-precio">S/ 80</p>
+                    <button onclick="agregarAlCarrito('Florero Minimalista',80,'img/florero.jpg')">Agregar al
+                        carrito</button>
+                </div>
+            </div>
+
+            <!-- PRODUCTO 3 -->
+            <div class="prop-card">
+                <img src="img/LamparaLed.jpg" alt="Lámpara LED de Mesa">
+                <div class="prop-info">
+                    <h3>Lámpara LED de Mesa</h3>
+                    <p class="prop-precio">S/ 150</p>
+                    <button onclick="agregarAlCarrito('Lámpara LED de Mesa',150,'img/LamparaLed.jpg')">Agregar al
+                        carrito</button>
+                </div>
+            </div>
+
+            <!-- PRODUCTO 4 -->
+            <div class="prop-card">
+                <img src="img/Alfombra.jpg" alt="Alfombra Boho">
+                <div class="prop-info">
+                    <h3>Alfombra Boho</h3>
+                    <p class="prop-precio">S/ 95</p>
+                    <button onclick="agregarAlCarrito('Alfombra Boho',95,'img/Alfombra.jpg')">Agregar al
+                        carrito</button>
+                </div>
+            </div>
+
+            <!-- PRODUCTO 5 -->
+            <div class="prop-card">
+                <img src="img/plantaartificial.jpg" alt="Planta Artificial Premium">
+                <div class="prop-info">
+                    <h3>Planta Artificial Premium</h3>
+                    <p class="prop-precio">S/ 70</p>
+                    <button
+                        onclick="agregarAlCarrito('Planta Artificial Premium',70,'img/plantaartificial.jpg')">Agregar al
+                        carrito</button>
+                </div>
+            </div>
+
+            <!-- PRODUCTO 6 -->
+            <div class="prop-card">
+                <img src="img/espejo.jpg" alt="Espejo Circular Minimalista">
+                <div class="prop-info">
+                    <h3>Espejo Circular Minimalista</h3>
+                    <p class="prop-precio">S/ 180</p>
+                    <button onclick="agregarAlCarrito('Espejo Circular Minimalista',180,'img/espejo.jpg')">Agregar al
+                        carrito</button>
+                </div>
+            </div>
+
+            <!-- PRODUCTO 7 -->
+            <div class="prop-card">
+                <img src="img/reloj.jpg" alt="Reloj de Pared Vintage">
+                <div class="prop-info">
+                    <h3>Reloj de Pared Vintage</h3>
+                    <p class="prop-precio">S/ 110</p>
+                    <button onclick="agregarAlCarrito('Reloj de Pared Vintage',110,'img/reloj.jpg')">Agregar al
+                        carrito</button>
+                </div>
+            </div>
+
+            <!-- PRODUCTO 8 -->
+            <div class="prop-card">
+                <img src="img/velas.jpg" alt="Set de Velas Aromáticas">
+                <div class="prop-info">
+                    <h3>Set de Velas Aromáticas</h3>
+                    <p class="prop-precio">S/ 45</p>
+                    <button onclick="agregarAlCarrito('Set de Velas Aromáticas',45,'img/velas.jpg')">Agregar al
+                        carrito</button>
+                </div>
+            </div>
+
         </div>
-
     </section>
-
-    <!-- CONTENIDO PRINCIPAL -->
-    <main class="container">
-
-        <section class="intro">
-            <p>
-                Estos consejos te ayudarán a encontrar la casa ideal en Perú, ya sea que estés buscando comprar o
-                alquilar. Desde establecer un presupuesto hasta investigar la zona, estos pasos te guiarán en el proceso
-                de búsqueda de tu nuevo hogar.
-            </p>
-        </section>
-
-        <!-- CONSEJO 1 -->
-        <article class="tip-card">
-
-            <div class="icon"></div>
-
-            <div class="tip-content">
-                <h2>Establece tu presupuesto</h2>
-                <p>
-                    <!-- Aquí va contenido del consejo -->
-                    Establecer un presupuesto claro es el primer paso para encontrar la casa ideal. Considera no solo el
-                    precio de compra o alquiler, sino también los gastos asociados como impuestos, seguros y
-                    mantenimiento.
-                </p>
-            </div>
-
-        </article>
-
-        <!-- CONSEJO 2 -->
-        <article class="tip-card">
-
-            <div class="icon"></div>
-
-            <div class="tip-content">
-                <h2>Determina tus necesidades</h2>
-                <p>
-                    <!-- Aquí va contenido del consejo -->
-                    Define claramente qué necesitas en una casa, como el número de habitaciones, el tamaño del jardín,
-                    la ubicación y las comodidades específicas.
-                </p>
-            </div>
-
-        </article>
-
-        <!-- CONSEJO 3 -->
-        <article class="tip-card">
-
-            <div class="icon"></div>
-
-            <div class="tip-content">
-                <h2>Busca en diferentes lugares</h2>
-                <p>
-                    <!-- Aquí va contenido del consejo -->
-                    Explora diferentes zonas y barrios para tener una visión más amplia de las opciones disponibles y
-                    encontrar la casa que mejor se adapte a tus necesidades.
-                </p>
-            </div>
-
-        </article>
-
-        <!-- CONSEJO 4 -->
-        <article class="tip-card">
-
-            <div class="icon"></div>
-
-            <div class="tip-content">
-                <h2>Haz uso de los recursos en línea</h2>
-                <p>
-                    <!-- Aquí va contenido del consejo -->
-                    Utiliza plataformas en línea, redes sociales y sitios web de bienes raíces para buscar propiedades,
-                    comparar precios y obtener información sobre el mercado inmobiliario.
-                </p>
-            </div>
-
-        </article>
-
-        <!-- CONSEJO 5 -->
-        <article class="tip-card">
-
-            <div class="icon"></div>
-
-            <div class="tip-content">
-                <h2>Trabaja con un agente inmobiliario</h2>
-                <p>
-                    <!-- Aquí va contenido del consejo -->
-                    Un agente inmobiliario puede ayudarte a encontrar propiedades que se ajusten a tus necesidades,
-                    negociar precios y guiarte a través del proceso de compra o alquiler.
-                </p>
-            </div>
-
-        </article>
-
-        <!-- CONSEJO 6 -->
-        <article class="tip-card">
-
-            <div class="icon"></div>
-
-            <div class="tip-content">
-                <h2>Haz una visita en persona</h2>
-                <p>
-                    <!-- Aquí va contenido del consejo -->
-                    Visitar la propiedad en persona te permitirá evaluar su condición, ubicación y ambiente de manera
-                    más precisa.
-                </p>
-            </div>
-
-        </article>
-
-        <!-- CONSEJO 7 -->
-        <article class="tip-card">
-
-            <div class="icon"></div>
-
-            <div class="tip-content">
-                <h2>Investiga la zona</h2>
-                <p>
-                    <!-- Aquí va contenido del consejo -->
-                    Investiga la zona donde se encuentra la propiedad para conocer su seguridad, servicios cercanos,
-                    transporte público y calidad de vida.
-                </p>
-            </div>
-
-        </article>
-
-        <!-- CONCLUSIÓN -->
-        <section class="conclusion">
-            <p>
-                <!-- Aquí va el párrafo final o conclusión -->
-
-
-            </p>
-        </section>
-
-    </main>
-
-    <!-- FOOTER -->
     <footer class="footer">
         <div class="footer-inner">
 
@@ -249,6 +207,8 @@
             <p>Copyright © 2026 Todos los derechos reservados</p>
         </div>
     </footer>
+    <script src="js/decoraciones.js"></script>
+
 
 </body>
 
